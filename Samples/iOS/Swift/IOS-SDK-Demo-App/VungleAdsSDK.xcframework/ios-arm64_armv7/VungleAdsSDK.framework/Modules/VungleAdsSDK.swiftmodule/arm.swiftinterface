@@ -1,0 +1,227 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VungleAdsSDK
+import AVFoundation
+import AdSupport
+import AppTrackingTransparency
+import CoreTelephony
+import Dispatch
+import Foundation
+import StoreKit
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+@_exported import VungleAdsSDK
+import WebKit
+import _Concurrency
+import os
+import zlib
+@objc public protocol VungleBannerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func bannerAdDidLoad(_ banner: VungleAdsSDK.VungleBanner)
+  @objc optional func bannerAdDidFailToLoad(_ banner: VungleAdsSDK.VungleBanner, withError: Foundation.NSError)
+  @objc optional func bannerAdWillPresent(_ banner: VungleAdsSDK.VungleBanner)
+  @objc optional func bannerAdDidPresent(_ banner: VungleAdsSDK.VungleBanner)
+  @objc optional func bannerAdDidFailToPresent(_ banner: VungleAdsSDK.VungleBanner, withError: Foundation.NSError)
+  @objc optional func bannerAdWillClose(_ banner: VungleAdsSDK.VungleBanner)
+  @objc optional func bannerAdDidClose(_ banner: VungleAdsSDK.VungleBanner)
+  @objc optional func bannerAdDidTrackImpression(_ banner: VungleAdsSDK.VungleBanner)
+  @objc optional func bannerAdDidClick(_ banner: VungleAdsSDK.VungleBanner)
+  @objc optional func bannerAdWillLeaveApplication(_ banner: VungleAdsSDK.VungleBanner)
+}
+@objc public enum BannerSize : Swift.Int {
+  case regular = 0
+  case short = 1
+  case leaderboard = 2
+  case mrec = 3
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class VungleBanner : VungleAdsSDK.BasePublicAd {
+  @objc weak public var delegate: VungleAdsSDK.VungleBannerDelegate?
+  @objc public var enableRefresh: Swift.Bool
+  @objc public init(placementId: Swift.String, size: VungleAdsSDK.BannerSize)
+  @objc public func present(on publisherView: UIKit.UIView)
+  @objc deinit
+}
+@objc public protocol VungleNativeDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func nativeAdDidLoad(_ native: VungleAdsSDK.VungleNative)
+  @objc optional func nativeAdDidFailToLoad(_ native: VungleAdsSDK.VungleNative, withError: Foundation.NSError)
+  @objc optional func nativeAdDidFailToPresent(_ native: VungleAdsSDK.VungleNative, withError: Foundation.NSError)
+  @objc optional func nativeAdDidTrackImpression(_ native: VungleAdsSDK.VungleNative)
+  @objc optional func nativeAdDidClick(_ native: VungleAdsSDK.VungleNative)
+}
+@objc public enum NativeAdOptionsPosition : Swift.Int {
+  case topLeft = 1
+  case topRight = 2
+  case bottomLeft = 3
+  case bottomRight = 4
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class VungleNative : VungleAdsSDK.BasePublicAd {
+  @objc weak public var delegate: VungleAdsSDK.VungleNativeDelegate?
+  @objc public var title: Swift.String {
+    get
+  }
+  @objc public var bodyText: Swift.String {
+    get
+  }
+  @objc public var callToAction: Swift.String {
+    get
+  }
+  @objc public var adStarRating: Swift.Double {
+    get
+  }
+  @objc public var sponsoredText: Swift.String {
+    get
+  }
+  @objc public var iconImage: UIKit.UIImage? {
+    get
+  }
+  @objc public var adOptionsPosition: VungleAdsSDK.NativeAdOptionsPosition
+  @objc public init(placementId: Swift.String)
+  @objc public func registerViewForInteraction(view: UIKit.UIView, mediaView: VungleAdsSDK.MediaView, iconImageView: UIKit.UIImageView?, viewController: UIKit.UIViewController?)
+  @objc public func registerViewForInteraction(view: UIKit.UIView, mediaView: VungleAdsSDK.MediaView, iconImageView: UIKit.UIImageView?, viewController: UIKit.UIViewController?, clickableViews: [UIKit.UIView]?)
+  @objc public func unregisterView()
+  @objc deinit
+}
+@objc public protocol VungleInterstitialDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func interstitialAdDidLoad(_ interstitial: VungleAdsSDK.VungleInterstitial)
+  @objc optional func interstitialAdDidFailToLoad(_ interstitial: VungleAdsSDK.VungleInterstitial, withError: Foundation.NSError)
+  @objc optional func interstitialAdWillPresent(_ interstitial: VungleAdsSDK.VungleInterstitial)
+  @objc optional func interstitialAdDidPresent(_ interstitial: VungleAdsSDK.VungleInterstitial)
+  @objc optional func interstitialAdDidFailToPresent(_ interstitial: VungleAdsSDK.VungleInterstitial, withError: Foundation.NSError)
+  @objc optional func interstitialAdWillClose(_ interstitial: VungleAdsSDK.VungleInterstitial)
+  @objc optional func interstitialAdDidClose(_ interstitial: VungleAdsSDK.VungleInterstitial)
+  @objc optional func interstitialAdDidTrackImpression(_ interstitial: VungleAdsSDK.VungleInterstitial)
+  @objc optional func interstitialAdDidClick(_ interstitial: VungleAdsSDK.VungleInterstitial)
+  @objc optional func interstitialAdWillLeaveApplication(_ interstitial: VungleAdsSDK.VungleInterstitial)
+}
+@_inheritsConvenienceInitializers @objc public class VungleInterstitial : VungleAdsSDK.BasePublicAd {
+  @objc weak public var delegate: VungleAdsSDK.VungleInterstitialDelegate?
+  @objc public init(placementId: Swift.String)
+  @objc public func present(with viewController: UIKit.UIViewController)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class BasePublicAd : ObjectiveC.NSObject {
+  @objc public var appId: Swift.String {
+    @objc get
+  }
+  @objc public var placementId: Swift.String {
+    @objc get
+  }
+  @objc public var eventId: Swift.String {
+    @objc get
+  }
+  @objc public var creativeId: Swift.String {
+    @objc get
+  }
+  @objc deinit
+  @objc public func canPlayAd() -> Swift.Bool
+  @objc public func load(_ bidPayload: Swift.String? = nil)
+}
+@objc public protocol VungleRewardedDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func rewardedAdDidLoad(_ rewarded: VungleAdsSDK.VungleRewarded)
+  @objc optional func rewardedAdDidFailToLoad(_ rewarded: VungleAdsSDK.VungleRewarded, withError: Foundation.NSError)
+  @objc optional func rewardedAdWillPresent(_ rewarded: VungleAdsSDK.VungleRewarded)
+  @objc optional func rewardedAdDidPresent(_ rewarded: VungleAdsSDK.VungleRewarded)
+  @objc optional func rewardedAdDidFailToPresent(_ rewarded: VungleAdsSDK.VungleRewarded, withError: Foundation.NSError)
+  @objc optional func rewardedAdWillClose(_ rewarded: VungleAdsSDK.VungleRewarded)
+  @objc optional func rewardedAdDidClose(_ rewarded: VungleAdsSDK.VungleRewarded)
+  @objc optional func rewardedAdDidTrackImpression(_ rewarded: VungleAdsSDK.VungleRewarded)
+  @objc optional func rewardedAdDidClick(_ rewarded: VungleAdsSDK.VungleRewarded)
+  @objc optional func rewardedAdWillLeaveApplication(_ rewarded: VungleAdsSDK.VungleRewarded)
+  @objc optional func rewardedAdDidRewardUser(_ rewarded: VungleAdsSDK.VungleRewarded)
+}
+@_inheritsConvenienceInitializers @objc public class VungleRewarded : VungleAdsSDK.BasePublicAd {
+  @objc weak public var delegate: VungleAdsSDK.VungleRewardedDelegate?
+  @objc public init(placementId: Swift.String)
+  @objc public func present(with viewController: UIKit.UIViewController)
+  @objc public func setUserId(userId: Swift.String)
+  @objc public func setAlertTitleText(_ text: Swift.String)
+  @objc public func setAlertBodyText(_ text: Swift.String)
+  @objc public func setAlertCloseButtonText(_ text: Swift.String)
+  @objc public func setAlertContinueButtonText(_ text: Swift.String)
+  @objc deinit
+}
+@objc public enum ConsentStatus : Swift.Int {
+  case accepted = 0
+  case denied = 1
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class VungleAds : ObjectiveC.NSObject {
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc final public class func initWithAppId(_ appId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc final public class func isInitialized() -> Swift.Bool
+  @objc public static func getBiddingToken() -> Swift.String
+  @objc final public class func setIntegrationName(_ integrationName: Swift.String, version: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class MediaView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class VunglePrivacySettings : ObjectiveC.NSObject {
+  @objc public static func setGDPRStatus(_ optIn: Swift.Bool)
+  @objc public static func setGDPRMessageVersion(_ version: Swift.String)
+  @objc public static func setCCPAStatus(_ optIn: Swift.Bool)
+  @objc public static func setCOPPAStatus(_ isUserCoppa: Swift.Bool)
+  @objc public static func setPublishIdfv(_ publish: Swift.Bool)
+  @objc deinit
+}
+public struct CompressionLevel : Swift.RawRepresentable {
+  public let rawValue: Swift.Int32
+  public static let noCompression: VungleAdsSDK.CompressionLevel
+  public static let bestSpeed: VungleAdsSDK.CompressionLevel
+  public static let bestCompression: VungleAdsSDK.CompressionLevel
+  public static let defaultCompression: VungleAdsSDK.CompressionLevel
+  public init(rawValue: Swift.Int32)
+  public init(_ rawValue: Swift.Int32)
+  public typealias RawValue = Swift.Int32
+}
+public struct GzipError : Swift.Error {
+  public enum Kind : Swift.Equatable {
+    case stream
+    case data
+    case memory
+    case buffer
+    case version
+    case unknown(code: Swift.Int)
+    public static func == (a: VungleAdsSDK.GzipError.Kind, b: VungleAdsSDK.GzipError.Kind) -> Swift.Bool
+  }
+  public let kind: VungleAdsSDK.GzipError.Kind
+  public let message: Swift.String
+  public var localizedDescription: Swift.String {
+    get
+  }
+}
+extension Foundation.Data {
+  public var isGzipped: Swift.Bool {
+    get
+  }
+  public func gzipped(level: VungleAdsSDK.CompressionLevel = .defaultCompression) throws -> Foundation.Data
+  public func gunzipped() throws -> Foundation.Data
+}
+extension VungleAdsSDK.BannerSize : Swift.Equatable {}
+extension VungleAdsSDK.BannerSize : Swift.Hashable {}
+extension VungleAdsSDK.BannerSize : Swift.RawRepresentable {}
+extension VungleAdsSDK.NativeAdOptionsPosition : Swift.Equatable {}
+extension VungleAdsSDK.NativeAdOptionsPosition : Swift.Hashable {}
+extension VungleAdsSDK.NativeAdOptionsPosition : Swift.RawRepresentable {}
+extension VungleAdsSDK.ConsentStatus : Swift.Equatable {}
+extension VungleAdsSDK.ConsentStatus : Swift.Hashable {}
+extension VungleAdsSDK.ConsentStatus : Swift.RawRepresentable {}
