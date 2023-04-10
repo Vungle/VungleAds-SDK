@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App-icon-launch" translatesAutoresizingMaskIntoConstraints="NO" id="9l5-Vq-UoV">
+                                <rect key="frame" x="171.66666666666666" y="341" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="HLf-LE-5Up"/>
+                                    <constraint firstAttribute="height" constant="50" id="Nzf-7V-wJT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Liftoff-monetize-demo" translatesAutoresizingMaskIntoConstraints="NO" id="2VT-pw-7cB">
+                                <rect key="frame" x="117.66666666666669" y="411" width="158" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="Sj7-iZ-NM4"/>
+                                    <constraint firstAttribute="height" constant="82" id="bTS-i5-OvW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2VT-pw-7cB" firstAttribute="centerX" secondItem="9l5-Vq-UoV" secondAttribute="centerX" id="3tU-Kr-jVI"/>
+                            <constraint firstItem="9l5-Vq-UoV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-60" id="TCo-qk-Caz"/>
+                            <constraint firstItem="9l5-Vq-UoV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Tos-sA-dfd"/>
+                            <constraint firstItem="2VT-pw-7cB" firstAttribute="top" secondItem="9l5-Vq-UoV" secondAttribute="bottom" constant="20" id="fdk-e6-llD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="App-icon-launch" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="Liftoff-monetize-demo" width="251" height="129"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
