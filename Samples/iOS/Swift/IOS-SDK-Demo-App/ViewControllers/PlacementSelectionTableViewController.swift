@@ -14,7 +14,6 @@ import VungleAdsSDK
 
 class PlacementSelectionTableViewController: UIViewController {
 
-    private let placementArr = Array((Bundle.main.infoDictionary?["Liftoff PlacementID"] as! Dictionary<String,Any>).values)
     private let adTypesArr = Array((Bundle.main.infoDictionary?["Liftoff PlacementID"] as! Dictionary<String,Any>).keys)
     
     /// View which contains the loading text and the spinner
@@ -114,8 +113,10 @@ extension PlacementSelectionTableViewController: UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "placementIdCell", for: indexPath) as! PlacementTableViewCell
         cell.adTypeLbl.text = self.adTypesArr[indexPath.row]
-        cell.placementLbl.text = self.placementArr[indexPath.row] as? String
         
+        if let dictionary = Bundle.main.infoDictionary?["Liftoff PlacementID"] as? Dictionary<String,String> {
+            cell.placementLbl.text = dictionary[cell.adTypeLbl.text!]
+        }
         return cell
     }
     
