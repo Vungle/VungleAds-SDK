@@ -31,3 +31,8 @@ DerivedData/
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+
+# CocoaPods
+Pods/
+*.xcworkspace
+
