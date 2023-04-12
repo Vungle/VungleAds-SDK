@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Liftoff Dashboard AppID</key>
+	<string>5e13cc9d61880b27a65bf735</string>
+	<key>Liftoff PlacementID</key>
+	<dict>
+		<key>Banner</key>
+		<string>BANNER04-8166553</string>
+		<key>Interstitial</key>
+		<string>INTERSTITIAL02-1468016</string>
+		<key>MREC</key>
+		<string>MREC03-4489762</string>
+		<key>Native</key>
+		<string>NATIVE_MAX_01-3496325</string>
+		<key>Rewarded</key>
+		<string>REWARDED03-2663131</string>
+		<key>Rewarded Playable</key>
+		<string>REWARDED_PLAYABLE03-6535366</string>
+	</dict>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>SceneDelegate</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Main</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>
