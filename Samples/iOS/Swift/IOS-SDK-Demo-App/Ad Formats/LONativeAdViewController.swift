@@ -60,6 +60,13 @@ class LONativeAdViewController: UIViewController {
     
     @IBAction func btnPressed(_ sender: UIButton) {
         if sender == self.loadBtn {
+            if self.nativeAd != nil {
+                self.nativeAd?.delegate = nil
+                self.nativeAd = nil
+                
+                AppUtil.resetLogMessage(tableView: self.tableView, callbacks: self.callbackLogs)
+            }
+            
             guard let placementId = self.placementId else {
                 return
             }
@@ -84,8 +91,6 @@ class LONativeAdViewController: UIViewController {
             }
         } else if sender == self.closeBtn {
             self.nativeAd?.unregisterView()
-            self.nativeAd?.delegate = nil
-            self.nativeAd = nil
             
             // Reset the values inside the labels
             self.titleLbl.text = "App Title"
@@ -93,8 +98,6 @@ class LONativeAdViewController: UIViewController {
             self.sponsorLbl.text = "Sponsored by Text"
             self.adTextLbl.text = "Body Text"
             self.downloadBtn.setTitle("CTA Text", for: .normal)
-            
-            AppUtil.resetLogMessage(tableView: self.tableView, callbacks: self.callbackLogs)
         }
     }
     

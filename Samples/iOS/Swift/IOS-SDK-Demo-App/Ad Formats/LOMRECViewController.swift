@@ -25,6 +25,11 @@ class LOMRECViewController: LOBannerViewController {
     
     override func btnPressed(_ sender: UIButton) {
         if sender == self.loadBtn {
+            if self.mrecAd != nil {
+                self.mrecAd?.delegate = nil
+                self.mrecAd = nil
+                AppUtil.resetLogMessage(tableView: self.tableView, callbacks: self.callbackLogs)
+            }
             guard let placementId = self.placementId else {
                 return
             }
@@ -40,10 +45,6 @@ class LOMRECViewController: LOBannerViewController {
             for subViews in self.bannerAdContainer.subviews {
                 subViews.removeFromSuperview()
             }
-            self.mrecAd?.delegate = nil
-            self.mrecAd = nil
-            
-            AppUtil.resetLogMessage(tableView: self.tableView, callbacks: self.callbackLogs)
         }
     }
 }
