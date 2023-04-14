@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lZ8-1T-gez">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -164,7 +165,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-KQ-wB8">
-                                        <rect key="frame" x="8" y="46" width="110" height="30"/>
+                                        <rect key="frame" x="0.0" y="46" width="110" height="30"/>
                                         <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="aXe-ZB-8Lr"/>
@@ -172,12 +173,17 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Load"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="btnPressed:" destination="yoq-68-Xal" eventType="touchUpInside" id="et4-of-TTn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tk3-ir-o85">
-                                        <rect key="frame" x="243" y="46" width="110" height="30"/>
+                                        <rect key="frame" x="251" y="46" width="110" height="30"/>
                                         <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="f10-HA-IYN"/>
@@ -185,6 +191,11 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Play"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="btnPressed:" destination="yoq-68-Xal" eventType="touchUpInside" id="zL9-b7-pKp"/>
                                         </connections>
@@ -196,11 +207,11 @@
                                     <constraint firstItem="s8e-KQ-wB8" firstAttribute="top" secondItem="bYM-4N-En1" secondAttribute="top" constant="46" id="HCR-8I-eRC"/>
                                     <constraint firstItem="tk3-ir-o85" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s8e-KQ-wB8" secondAttribute="trailing" constant="8" symbolic="YES" id="Jd1-WV-GyN"/>
                                     <constraint firstItem="baj-Mo-Job" firstAttribute="top" secondItem="bYM-4N-En1" secondAttribute="top" constant="8" id="Lqt-qT-CFn"/>
-                                    <constraint firstItem="s8e-KQ-wB8" firstAttribute="leading" secondItem="bYM-4N-En1" secondAttribute="leading" constant="8" id="V8p-1d-DX2"/>
+                                    <constraint firstItem="s8e-KQ-wB8" firstAttribute="leading" secondItem="bYM-4N-En1" secondAttribute="leading" id="V8p-1d-DX2"/>
                                     <constraint firstItem="tk3-ir-o85" firstAttribute="top" secondItem="baj-Mo-Job" secondAttribute="bottom" constant="15" id="aKI-ey-0lr"/>
                                     <constraint firstItem="baj-Mo-Job" firstAttribute="centerX" secondItem="bYM-4N-En1" secondAttribute="centerX" id="tdV-6B-KLg"/>
                                     <constraint firstAttribute="height" constant="87" id="vPs-0p-Ug7"/>
-                                    <constraint firstAttribute="trailing" secondItem="tk3-ir-o85" secondAttribute="trailing" constant="8" id="xRY-jM-bgl"/>
+                                    <constraint firstAttribute="trailing" secondItem="tk3-ir-o85" secondAttribute="trailing" id="xRY-jM-bgl"/>
                                     <constraint firstAttribute="bottom" secondItem="s8e-KQ-wB8" secondAttribute="bottom" constant="11" id="xwG-FU-FB5"/>
                                     <constraint firstAttribute="bottom" secondItem="tk3-ir-o85" secondAttribute="bottom" constant="11" id="xyp-4d-db1"/>
                                 </constraints>
@@ -284,7 +295,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY9-H8-ImN">
-                                        <rect key="frame" x="8" y="46" width="110" height="30"/>
+                                        <rect key="frame" x="0.0" y="46" width="110" height="30"/>
                                         <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ceZ-p1-IHk"/>
@@ -292,12 +303,17 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Load"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="btnPressed:" destination="3v2-ls-7qg" eventType="touchUpInside" id="Lje-fU-hYH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtD-Lu-Wfd">
-                                        <rect key="frame" x="243" y="46" width="110" height="30"/>
+                                        <rect key="frame" x="251" y="46" width="110" height="30"/>
                                         <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="3JB-EW-Ro8"/>
@@ -305,6 +321,11 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Play"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="btnPressed:" destination="3v2-ls-7qg" eventType="touchUpInside" id="A6g-zZ-TGe"/>
                                         </connections>
@@ -314,10 +335,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="2Cv-C9-qYQ"/>
                                     <constraint firstItem="x3d-6O-LNi" firstAttribute="top" secondItem="TJR-Wu-L27" secondAttribute="top" constant="8" id="458-zO-KDa"/>
-                                    <constraint firstAttribute="trailing" secondItem="gtD-Lu-Wfd" secondAttribute="trailing" constant="8" id="MTE-fE-fbr"/>
+                                    <constraint firstAttribute="trailing" secondItem="gtD-Lu-Wfd" secondAttribute="trailing" id="MTE-fE-fbr"/>
                                     <constraint firstItem="gtD-Lu-Wfd" firstAttribute="top" secondItem="x3d-6O-LNi" secondAttribute="bottom" constant="15" id="TF4-bL-7WA"/>
                                     <constraint firstAttribute="bottom" secondItem="cY9-H8-ImN" secondAttribute="bottom" constant="11" id="UWS-Rk-53d"/>
-                                    <constraint firstItem="cY9-H8-ImN" firstAttribute="leading" secondItem="TJR-Wu-L27" secondAttribute="leading" constant="8" id="Xgf-6Q-oVV"/>
+                                    <constraint firstItem="cY9-H8-ImN" firstAttribute="leading" secondItem="TJR-Wu-L27" secondAttribute="leading" id="Xgf-6Q-oVV"/>
                                     <constraint firstItem="gtD-Lu-Wfd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cY9-H8-ImN" secondAttribute="trailing" constant="8" symbolic="YES" id="eHV-ZB-Zgc"/>
                                     <constraint firstItem="x3d-6O-LNi" firstAttribute="centerX" secondItem="TJR-Wu-L27" secondAttribute="centerX" id="gQ3-7a-Ner"/>
                                     <constraint firstItem="gtD-Lu-Wfd" firstAttribute="top" secondItem="TJR-Wu-L27" secondAttribute="top" constant="46" id="iU9-kQ-MpB"/>
@@ -478,25 +499,17 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Play"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="EsI-w1-Ltn"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbM-y3-jmq">
-                                                        <rect key="frame" x="251" y="44" width="110" height="30"/>
-                                                        <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="A9y-ST-xbe"/>
-                                                            <constraint firstAttribute="width" constant="110" id="cqd-bT-bPr"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Close"/>
-                                                        <connections>
-                                                            <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="pJj-1h-7UF"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coD-uu-Rfc">
-                                                        <rect key="frame" x="15" y="44" width="110" height="30"/>
+                                                        <rect key="frame" x="0.0" y="44" width="110" height="30"/>
                                                         <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="hFa-2B-EMM"/>
@@ -504,8 +517,31 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Load"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="ZZp-9q-W9m"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbM-y3-jmq">
+                                                        <rect key="frame" x="267" y="44" width="110" height="30"/>
+                                                        <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="A9y-ST-xbe"/>
+                                                            <constraint firstAttribute="width" constant="110" id="cqd-bT-bPr"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Close"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="pJj-1h-7UF"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -513,16 +549,16 @@
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="GbM-y3-jmq" secondAttribute="bottom" constant="13" id="8LB-oX-hSs"/>
                                                     <constraint firstItem="Hlu-J9-BiP" firstAttribute="centerY" secondItem="coD-uu-Rfc" secondAttribute="centerY" id="FnC-93-gHQ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="GbM-y3-jmq" secondAttribute="trailing" constant="16" id="LBp-AP-xSd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GbM-y3-jmq" secondAttribute="trailing" id="Mxh-ud-l55"/>
                                                     <constraint firstItem="Hlu-J9-BiP" firstAttribute="top" secondItem="KI0-QT-U8y" secondAttribute="bottom" constant="13" id="Vqq-Ut-jKx"/>
                                                     <constraint firstItem="KI0-QT-U8y" firstAttribute="centerX" secondItem="ugw-Iv-uBc" secondAttribute="centerX" id="bdJ-bH-gdc"/>
-                                                    <constraint firstItem="coD-uu-Rfc" firstAttribute="leading" secondItem="ugw-Iv-uBc" secondAttribute="leading" constant="15" id="gPu-Wj-sHe"/>
+                                                    <constraint firstItem="GbM-y3-jmq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hlu-J9-BiP" secondAttribute="trailing" constant="23.329999999999998" id="cVu-X7-Vhc"/>
+                                                    <constraint firstItem="coD-uu-Rfc" firstAttribute="leading" secondItem="ugw-Iv-uBc" secondAttribute="leading" id="gPu-Wj-sHe"/>
                                                     <constraint firstItem="Hlu-J9-BiP" firstAttribute="centerX" secondItem="ugw-Iv-uBc" secondAttribute="centerX" id="mGg-Nz-oJ4"/>
                                                     <constraint firstItem="GbM-y3-jmq" firstAttribute="centerY" secondItem="coD-uu-Rfc" secondAttribute="centerY" id="nKa-zT-P3X"/>
                                                     <constraint firstItem="KI0-QT-U8y" firstAttribute="top" secondItem="ugw-Iv-uBc" secondAttribute="top" constant="8" id="r6A-Ca-8xg"/>
                                                     <constraint firstAttribute="bottom" secondItem="Hlu-J9-BiP" secondAttribute="bottom" constant="13" id="rXz-gz-3Hx"/>
                                                     <constraint firstItem="coD-uu-Rfc" firstAttribute="top" secondItem="KI0-QT-U8y" secondAttribute="bottom" constant="13" id="tUv-RE-1Ws"/>
-                                                    <constraint firstItem="GbM-y3-jmq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hlu-J9-BiP" secondAttribute="trailing" constant="7.3300000000000001" id="toY-zx-JOT"/>
                                                     <constraint firstItem="Hlu-J9-BiP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="coD-uu-Rfc" secondAttribute="trailing" constant="8" symbolic="YES" id="yhZ-xd-Ea7"/>
                                                     <constraint firstAttribute="bottom" secondItem="coD-uu-Rfc" secondAttribute="bottom" constant="13" id="zAv-y5-KS6"/>
                                                 </constraints>
@@ -675,27 +711,18 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Play"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="0JN-YS-OL6"/>
                                                             <action selector="btnPressed:" destination="d8P-LL-FiT" eventType="touchUpInside" id="mIB-sc-qu3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raU-QI-ncG">
-                                                        <rect key="frame" x="251" y="44" width="110" height="30"/>
-                                                        <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="lyy-Nn-tml"/>
-                                                            <constraint firstAttribute="width" constant="110" id="rkj-gT-EMS"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Close"/>
-                                                        <connections>
-                                                            <action selector="btnPressed:" destination="d8P-LL-FiT" eventType="touchUpInside" id="1o3-56-Ndk"/>
-                                                            <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="HDg-wT-ew9"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKF-kB-Aqq">
-                                                        <rect key="frame" x="15" y="44" width="110" height="30"/>
+                                                        <rect key="frame" x="0.0" y="44" width="110" height="30"/>
                                                         <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="9ZH-DQ-XB6"/>
@@ -703,9 +730,33 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Load"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="btnPressed:" destination="d8P-LL-FiT" eventType="touchUpInside" id="Ucs-ol-evx"/>
                                                             <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="fLw-sK-KTr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raU-QI-ncG">
+                                                        <rect key="frame" x="267" y="44" width="110" height="30"/>
+                                                        <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="lyy-Nn-tml"/>
+                                                            <constraint firstAttribute="width" constant="110" id="rkj-gT-EMS"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Close"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="btnPressed:" destination="d8P-LL-FiT" eventType="touchUpInside" id="1o3-56-Ndk"/>
+                                                            <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="HDg-wT-ew9"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -721,8 +772,8 @@
                                                     <constraint firstItem="AKF-kB-Aqq" firstAttribute="top" secondItem="luq-CL-rUL" secondAttribute="bottom" constant="13" id="dLH-iu-ibH"/>
                                                     <constraint firstItem="luq-CL-rUL" firstAttribute="top" secondItem="bB1-KP-cR2" secondAttribute="top" constant="8" id="djm-RU-bET"/>
                                                     <constraint firstAttribute="bottom" secondItem="AKF-kB-Aqq" secondAttribute="bottom" constant="13" id="iFa-xe-UxD"/>
-                                                    <constraint firstItem="AKF-kB-Aqq" firstAttribute="leading" secondItem="bB1-KP-cR2" secondAttribute="leading" constant="15" id="qwd-AG-HwG"/>
-                                                    <constraint firstAttribute="trailing" secondItem="raU-QI-ncG" secondAttribute="trailing" constant="16" id="vbz-R2-zqd"/>
+                                                    <constraint firstItem="AKF-kB-Aqq" firstAttribute="leading" secondItem="bB1-KP-cR2" secondAttribute="leading" id="qwd-AG-HwG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="raU-QI-ncG" secondAttribute="trailing" id="vbz-R2-zqd"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -943,29 +994,19 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Play"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="btnPressed:" destination="d8P-LL-FiT" eventType="touchUpInside" id="6Bx-d3-jo4"/>
                                                             <action selector="btnPressed:" destination="gQk-Rs-hlE" eventType="touchUpInside" id="mKX-52-zuP"/>
                                                             <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="wAi-T3-rki"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocO-Ef-gPP">
-                                                        <rect key="frame" x="251" y="44" width="110" height="30"/>
-                                                        <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="Dao-NN-B1X"/>
-                                                            <constraint firstAttribute="width" constant="110" id="SyY-CR-TNj"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Close"/>
-                                                        <connections>
-                                                            <action selector="btnPressed:" destination="d8P-LL-FiT" eventType="touchUpInside" id="4KC-Y0-K6F"/>
-                                                            <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="7qG-NX-Krz"/>
-                                                            <action selector="btnPressed:" destination="gQk-Rs-hlE" eventType="touchUpInside" id="bhv-B3-aS9"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgF-at-jUJ">
-                                                        <rect key="frame" x="15" y="44" width="110" height="30"/>
+                                                        <rect key="frame" x="0.0" y="44" width="110" height="30"/>
                                                         <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="110" id="JKT-5X-bvd"/>
@@ -973,10 +1014,35 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Load"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="btnPressed:" destination="d8P-LL-FiT" eventType="touchUpInside" id="9Yo-cJ-aGJ"/>
                                                             <action selector="btnPressed:" destination="gQk-Rs-hlE" eventType="touchUpInside" id="E42-dY-r1f"/>
                                                             <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="gOI-J8-UfW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocO-Ef-gPP">
+                                                        <rect key="frame" x="267" y="44" width="110" height="30"/>
+                                                        <color key="backgroundColor" red="0.91374033690000001" green="0.9137139916" blue="0.92156988380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Dao-NN-B1X"/>
+                                                            <constraint firstAttribute="width" constant="110" id="SyY-CR-TNj"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Close"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="btnPressed:" destination="d8P-LL-FiT" eventType="touchUpInside" id="4KC-Y0-K6F"/>
+                                                            <action selector="btnPressed:" destination="J9s-6G-hjn" eventType="touchUpInside" id="7qG-NX-Krz"/>
+                                                            <action selector="btnPressed:" destination="gQk-Rs-hlE" eventType="touchUpInside" id="bhv-B3-aS9"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -987,10 +1053,10 @@
                                                     <constraint firstItem="RD8-A3-T2Q" firstAttribute="centerY" secondItem="RgF-at-jUJ" secondAttribute="centerY" id="Xv7-T2-ViZ"/>
                                                     <constraint firstItem="jtf-1N-sqF" firstAttribute="top" secondItem="kut-Dd-AnF" secondAttribute="top" constant="8" id="bFt-gQ-agC"/>
                                                     <constraint firstItem="ocO-Ef-gPP" firstAttribute="centerY" secondItem="RgF-at-jUJ" secondAttribute="centerY" id="bdI-J9-CJS"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ocO-Ef-gPP" secondAttribute="trailing" constant="16" id="dUg-0I-Ian"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ocO-Ef-gPP" secondAttribute="trailing" id="dUg-0I-Ian"/>
                                                     <constraint firstItem="jtf-1N-sqF" firstAttribute="centerX" secondItem="kut-Dd-AnF" secondAttribute="centerX" id="g4J-Kd-5ca"/>
                                                     <constraint firstItem="RD8-A3-T2Q" firstAttribute="top" secondItem="jtf-1N-sqF" secondAttribute="bottom" constant="13" id="iNM-Sz-dLt"/>
-                                                    <constraint firstItem="RgF-at-jUJ" firstAttribute="leading" secondItem="kut-Dd-AnF" secondAttribute="leading" constant="15" id="s6M-me-2b9"/>
+                                                    <constraint firstItem="RgF-at-jUJ" firstAttribute="leading" secondItem="kut-Dd-AnF" secondAttribute="leading" id="s6M-me-2b9"/>
                                                     <constraint firstAttribute="bottom" secondItem="RD8-A3-T2Q" secondAttribute="bottom" constant="13" id="tdi-IK-rwQ"/>
                                                     <constraint firstAttribute="bottom" secondItem="RgF-at-jUJ" secondAttribute="bottom" constant="13" id="uVJ-7H-XAP"/>
                                                     <constraint firstItem="RD8-A3-T2Q" firstAttribute="centerX" secondItem="kut-Dd-AnF" secondAttribute="centerX" id="yOJ-ee-Ilo"/>
