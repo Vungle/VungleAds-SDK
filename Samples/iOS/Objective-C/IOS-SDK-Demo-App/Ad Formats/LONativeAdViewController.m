@@ -121,7 +121,7 @@
    [[CallbackLog alloc] initWithTitle:@"nativeAdDidLoad" index:0],
    [[CallbackLog alloc] initWithTitle:@"nativeAdDidTrackImpression" index:1],
    [[CallbackLog alloc] initWithTitle:@"nativeAdDidClick" index:2],
-   [[CallbackLog alloc] initWithTitle:@"nativeAdDidFailLoad" index:3],
+   [[CallbackLog alloc] initWithTitle:@"nativeAdDidFailToLoad" index:3],
    [[CallbackLog alloc] initWithTitle:@"nativeAdDidFailToPresent" index:4],
  ];
 }
