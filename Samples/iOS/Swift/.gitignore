@@ -1,6 +1,7 @@
 # Xcode
 
 ## User settings
+.DS_Store
 xcuserdata/
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
@@ -31,3 +32,9 @@ DerivedData/
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+
+# CocoaPods
+Podfile.lock
+Pods/
+*.xcworkspace
+
