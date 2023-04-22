@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragPlacementList">
+
+    <fragment
+        android:id="@+id/fragPlacementList"
+        android:name="com.vungle.samples.samplekotlin.PlacementFragment"
+        android:label="PlacementList">
+
+        <action
+            android:id="@+id/action_nav_placement_list_to_nav_interstitial"
+            app:destination="@id/fragInterstitial" />
+
+        <action
+            android:id="@+id/action_nav_placement_list_to_nav_rewarded"
+            app:destination="@id/fragRewarded" />
+
+        <action
+            android:id="@+id/action_nav_placement_list_to_nav_banner"
+            app:destination="@id/fragBanner" />
+
+        <action
+            android:id="@+id/action_nav_placement_list_to_nav_mrec"
+            app:destination="@id/fragMrec" />
+
+        <action
+            android:id="@+id/action_nav_placement_list_to_nav_nativead"
+            app:destination="@id/fragNativeAd" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragInterstitial"
+        android:name="com.vungle.samples.samplekotlin.InterstitialFragment"
+        android:label="Interstitial"/>
+
+    <fragment
+        android:id="@+id/fragRewarded"
+        android:name="com.vungle.samples.samplekotlin.RewardedFragment"
+        android:label="Rewarded"/>
+
+    <fragment
+        android:id="@+id/fragBanner"
+        android:name="com.vungle.samples.samplekotlin.BannerFragment"
+        android:label="Banner" />
+
+    <fragment
+        android:id="@+id/fragMrec"
+        android:name="com.vungle.samples.samplekotlin.MrecFragment"
+        android:label="Banner" />
+
+    <fragment
+        android:id="@+id/fragNativeAd"
+        android:name="com.vungle.samples.samplekotlin.NativeAdFragment"
+        android:label="Native Ad"/>
+
+</navigation>
