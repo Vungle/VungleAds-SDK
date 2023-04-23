@@ -52,6 +52,7 @@ public class BannerFragment extends AdExperienceFragment implements BannerAdList
         if (bannerAd != null) {
             _binding.adContainer.removeAllViews();
             bannerAd.setAdListener(null);
+            bannerAd.finishAd();
             bannerAd = null;
         }
     }

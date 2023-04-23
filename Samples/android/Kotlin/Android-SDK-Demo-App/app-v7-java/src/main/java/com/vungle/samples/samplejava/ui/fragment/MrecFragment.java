@@ -52,6 +52,7 @@ public class MrecFragment extends AdExperienceFragment implements BannerAdListen
         if (bannerAd != null) {
             _binding.adContainer.removeAllViews();
             bannerAd.setAdListener(null);
+            bannerAd.finishAd();
             bannerAd = null;
         }
     }
