@@ -51,8 +51,8 @@ public class NativeAdFragment extends AdExperienceFragment implements NativeAdLi
         super.destroyAd();
         if (nativeAd != null) {
             _binding.adContainer.removeAllViews();
-            nativeAd.setAdListener(null);
             nativeAd.unregisterView();
+            nativeAd.setAdListener(null);
             nativeAd = null;
         }
     }
