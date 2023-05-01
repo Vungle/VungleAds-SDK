@@ -50,6 +50,11 @@ class LOBannerViewController: UIViewController {
     
     @IBAction func btnPressed(_ sender:UIButton) {
         if sender == loadBtn {
+            if self.bannerAd != nil {
+                self.bannerAd?.delegate = nil
+                self.bannerAd = nil
+                AppUtil.resetLogMessage(tableView: self.tableView, callbacks: self.callbackLogs)
+            }
             guard let placementId = self.placementId else {
                 return
             }
@@ -72,10 +77,6 @@ class LOBannerViewController: UIViewController {
             for subView in self.bannerAdContainer.subviews {
                 subView.removeFromSuperview()
             }
-            self.bannerAd?.delegate = nil
-            self.bannerAd = nil
-            
-            AppUtil.resetLogMessage(tableView: self.tableView, callbacks: self.callbackLogs)
         }
     }
 }
