@@ -10,6 +10,9 @@
  */
 
 #import "SceneDelegate.h"
+#if defined(__IPHONE_14_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_14_0
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+#endif
 
 @interface SceneDelegate ()
 
@@ -36,6 +39,15 @@
 - (void)sceneDidBecomeActive:(UIScene *)scene {
   // Called when the scene has moved from an inactive state to an active state.
   // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+    if (@available(iOS 14, *)) {
+        double delayInSeconds = 1.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            //code to be executed on the main queue after delay
+            [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            }];
+        });
+    }
 }
 
 
