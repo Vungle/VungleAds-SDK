@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lbAdType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Interstitial" />
+
+    <TextView
+        android:id="@+id/lbPlacementId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="BANNER_1-8363817" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbPlacementId" />
+
+    <Button
+        android:id="@+id/btnLoadAd"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/load"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:backgroundTint="@color/button_bg"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlayAd"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <Button
+        android:id="@+id/btnPlayAd"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:enabled="false"
+        android:text="@string/play"
+        android:textAllCaps="false"
+        android:textColor="@color/button_text"
+        android:textSize="16sp"
+        app:backgroundTint="@color/button_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLoadAd"
+        app:layout_constraintEnd_toStartOf="@+id/btnDestroyAd"
+        app:layout_constraintStart_toEndOf="@+id/btnLoadAd"
+        app:layout_constraintTop_toTopOf="@+id/btnLoadAd" />
+
+    <Button
+        android:id="@+id/btnDestroyAd"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
+        android:text="@string/destroy"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:backgroundTint="@color/button_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLoadAd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPlayAd"
+        app:layout_constraintTop_toTopOf="@+id/btnLoadAd" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoadAd" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/ad_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3">
+
+        <LinearLayout
+            android:id="@+id/tblCallbacksLogList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbAdLoaded"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/adloaded"
+                android:textColor="@color/lightGray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lbAdStart"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/adstart"
+                android:textColor="@color/lightGray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lbAdImpression"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/adimpression"
+                android:textColor="@color/lightGray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lbAdClick"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/adclick"
+                android:textColor="@color/lightGray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lbOnAdLeftApplication"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/onadleftapplication"
+                android:textColor="@color/lightGray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lbOnRewarded"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/onrewarded"
+                android:textColor="@color/lightGray"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/lbAdEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/adend"
+                android:textColor="@color/lightGray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lbError"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/error"
+                android:textColor="@color/lightGray"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/txtAdHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ad_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ad_container"
+        tools:text="50" />
+
+    <FrameLayout
+        android:id="@+id/ad_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/txtAdWidth"
+        app:layout_constraintEnd_toStartOf="@+id/txtAdHeight"
+        app:layout_constraintHeight="wrap_content"
+        app:layout_constraintHeight_min="50dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAdWidth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="320" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_83bbe5"
+        android:visibility="gone"
+        app:constraint_referenced_ids="txtAdWidth,@+id/ad_container,txtAdHeight" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/lbAdSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbAdSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/ad_size"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnBanner320x50"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnBanner320x50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/banner_320x50"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbOrientation"
+        app:layout_constraintEnd_toStartOf="@+id/btnShort300x50"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnShort300x50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/short_300x50"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBanner320x50"
+        app:layout_constraintEnd_toStartOf="@+id/btnLeaderboard728x90"
+        app:layout_constraintStart_toEndOf="@+id/btnBanner320x50"
+        app:layout_constraintTop_toTopOf="@+id/btnBanner320x50" />
+
+    <Button
+        android:id="@+id/btnLeaderboard728x90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="@string/leaderboard_728x90"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBanner320x50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnShort300x50"
+        app:layout_constraintTop_toTopOf="@+id/btnBanner320x50" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupAdSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="lbAdSize,btnBanner320x50,btnShort300x50,btnLeaderboard728x90" />
+
+    <TextView
+        android:id="@+id/lbOrientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/orientation"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNotSetOrientation"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNotSetOrientation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/button_blue"
+        android:text="@string/not_set"
+        android:maxLines="1"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbAdOptionsPosition"
+        app:layout_constraintEnd_toStartOf="@+id/btnPortraitOrientation"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPortraitOrientation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/portrait"
+        android:maxLines="1"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnLandscapeOrientation"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/btnNotSetOrientation" />
+
+    <Button
+        android:id="@+id/btnLandscapeOrientation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/landscape"
+        android:textAllCaps="false"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNotSetOrientation"
+        app:layout_constraintEnd_toStartOf="@+id/btnAutoRotateOrientation"
+        app:layout_constraintStart_toEndOf="@+id/btnPortraitOrientation"
+        app:layout_constraintTop_toTopOf="@+id/btnNotSetOrientation" />
+
+    <Button
+        android:id="@+id/btnAutoRotateOrientation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="@string/auto_rotate"
+        android:textAllCaps="false"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNotSetOrientation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnLandscapeOrientation"
+        app:layout_constraintTop_toTopOf="@+id/btnNotSetOrientation" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupOrientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="lbOrientation,btnNotSetOrientation,btnPortraitOrientation,btnLandscapeOrientation,btnAutoRotateOrientation" />
+
+    <TextView
+        android:id="@+id/lbAdOptionsPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/ad_options_position"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNotSetPosition"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNotSetPosition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/not_n_set"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:maxLines="2"
+        android:textSize="12sp"
+        android:backgroundTint="@color/button_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnTopLeftPosition"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnTopLeftPosition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/top_left"
+        android:textAllCaps="false"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNotSetPosition"
+        app:layout_constraintEnd_toStartOf="@+id/btnTopRightPosition"
+        app:layout_constraintStart_toEndOf="@+id/btnNotSetPosition"
+        app:layout_constraintTop_toTopOf="@+id/btnNotSetPosition" />
+
+    <Button
+        android:id="@+id/btnTopRightPosition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="@string/top_right"
+        android:textAllCaps="false"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNotSetPosition"
+        app:layout_constraintEnd_toStartOf="@+id/btnBottomLeftPosition"
+        app:layout_constraintStart_toEndOf="@+id/btnTopLeftPosition"
+        app:layout_constraintTop_toTopOf="@+id/btnNotSetPosition" />
+
+    <Button
+        android:id="@+id/btnBottomLeftPosition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="@string/bottom_left"
+        android:textAllCaps="false"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNotSetPosition"
+        app:layout_constraintEnd_toStartOf="@+id/btnBottomRightPosition"
+        app:layout_constraintStart_toEndOf="@+id/btnTopRightPosition"
+        app:layout_constraintTop_toTopOf="@+id/btnNotSetPosition" />
+
+    <Button
+        android:id="@+id/btnBottomRightPosition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="@string/bottom_right"
+        android:textAllCaps="false"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNotSetPosition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBottomLeftPosition"
+        app:layout_constraintTop_toTopOf="@+id/btnNotSetPosition" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="lbAdOptionsPosition,btnNotSetPosition,btnTopLeftPosition,btnTopRightPosition,btnBottomLeftPosition,btnBottomRightPosition" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
