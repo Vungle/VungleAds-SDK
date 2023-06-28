@@ -19,7 +19,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -47,15 +48,15 @@ dependencies {
 //    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
     implementation 'com.android.support:multidex:1.0.3'
 
-    implementation 'com.vungle:vungle-ads:7.0.0-EA1'
+//    implementation 'com.vungle:vungle-ads:7.0.0-EA1'
 
     // Vungle SDK dependencies
-//    implementation files('libs/vungle-ads-7.0.0-EA1.aar')
-//    implementation files('libs/vungle-ads-7.0.0-EA1.jar')
-//    implementation files('libs/kotlinx-serialization-json-jvm-1.4.1.jar')
-//    implementation files('libs/okhttp-4.10.0.jar')
-//    implementation files('libs/okio-jvm-2.8.0.jar')
-//    implementation files('libs/protobuf-kotlin-3.21.7.jar')
+    implementation(files("./libs/kotlinx-serialization-core-jvm-1.4.1.jar"))
+    implementation(files("./libs/kotlinx-serialization-json-jvm-1.4.1.jar"))
+    implementation(files("./libs/okhttp-4.10.0.jar"))
+    implementation(files("./libs/okio-jvm-3.0.0.jar"))
+    implementation(files("./libs/protobuf-javalite-3.21.12.jar"))
+    implementation(files("./libs/vungle-7.0.0-GA-RC1.aar"))
 
     // Recommended Google Play Services libraries to support app set ID (v6.10.3 and above)
     implementation 'com.google.android.gms:play-services-tasks:18.0.2'
