@@ -19,8 +19,10 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
@@ -47,8 +49,8 @@ dependencies {
 //    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
     implementation 'com.android.support:multidex:1.0.3'
 
-    implementation 'com.vungle:vungle-ads:7.0.0-EA1'
-
+//    implementation 'com.vungle:vungle-ads:7.0.0-EA1'
+    implementation 'com.github.vungle:vng-android-sdk:7.0.0-GA-RC3'
     // Vungle SDK dependencies
 //    implementation files('libs/vungle-ads-7.0.0-EA1.aar')
 //    implementation files('libs/vungle-ads-7.0.0-EA1.jar')
