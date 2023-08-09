@@ -1,0 +1,2 @@
+include ':app-v7-kotlin'
+include ':app-v7-java'
