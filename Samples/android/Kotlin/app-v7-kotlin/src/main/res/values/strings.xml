@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Monetize Demo</string>
+    <string name="app_name">Monetize Kotlin Demo</string>
 
     <string name="play_ad">Play</string>
     <string name="load_ad">Load</string>
