@@ -850,7 +850,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89y-vo-TxN" userLabel="Native Ad View">
                                                 <rect key="frame" x="8" y="95" width="377" height="422"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8I-0t-sEd">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8I-0t-sEd" customClass="MediaView">
                                                         <rect key="frame" x="8" y="97" width="361" height="228"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>

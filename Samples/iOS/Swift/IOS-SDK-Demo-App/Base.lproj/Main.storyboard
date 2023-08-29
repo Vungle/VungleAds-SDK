@@ -341,7 +341,7 @@
                                                             <constraint firstAttribute="width" constant="90" id="qRW-cb-3lt"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ct5-YK-CwY">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ct5-YK-CwY" customClass="MediaView">
                                                         <rect key="frame" x="8" y="102" width="398" height="228"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
