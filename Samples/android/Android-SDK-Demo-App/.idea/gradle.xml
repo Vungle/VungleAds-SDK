@@ -12,7 +12,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app-v7-java" />
-            <option value="$PROJECT_DIR$/app-v7-kotlin" />
           </set>
         </option>
       </GradleProjectSettings>

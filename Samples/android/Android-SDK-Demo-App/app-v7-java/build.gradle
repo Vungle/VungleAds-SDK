@@ -1,15 +1,16 @@
-plugins {
-    id 'com.android.application'
-}
+//plugins {
+//    id 'com.android.application'
+//}
+apply plugin: 'com.android.application'
 
 android {
-    namespace 'com.vungle.samples.samplejava'
-    compileSdk 33
+//    namespace 'com.vungle.samples.samplejava'
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.vungle.samples.samplejava"
-        minSdk 19
-        targetSdk 33
+        minSdkVersion 19
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -49,8 +50,8 @@ dependencies {
 //    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
     implementation 'com.android.support:multidex:1.0.3'
 
-//    implementation 'com.vungle:vungle-ads:7.0.0-EA1'
-    implementation 'com.github.vungle:vng-android-sdk:7.0.0-GA-RC3'
+    implementation 'com.vungle:vungle-ads:7.0.0'
+//    implementation 'com.github.vungle:vng-android-sdk:7.0.0-GA-RC3'
     // Vungle SDK dependencies
 //    implementation files('libs/vungle-ads-7.0.0-EA1.aar')
 //    implementation files('libs/vungle-ads-7.0.0-EA1.jar')
