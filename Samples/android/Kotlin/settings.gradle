@@ -1,1 +1,2 @@
+rootProject.name = 'Vungle Android SDK Kotlin Sample App'
 include ':app-v7-kotlin'
