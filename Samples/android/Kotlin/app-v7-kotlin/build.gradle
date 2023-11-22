@@ -59,7 +59,7 @@ dependencies {
 
 //    implementation 'com.vungle:vungle-ads:7.0.0-EA1'
 
-    implementation 'com.github.vungle:vng-android-sdk:7.1.0-RC1'
+    implementation 'com.github.vungle:vng-android-sdk:7.1.0-RC2'
 
     // Vungle SDK dependencies
 //    implementation files('libs/vungle-ads-7.0.0-EA1.aar')
