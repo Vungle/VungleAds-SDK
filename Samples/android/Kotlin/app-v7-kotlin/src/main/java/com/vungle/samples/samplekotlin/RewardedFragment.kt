@@ -34,7 +34,7 @@ class RewardedFragment : AdExperienceFragment(), RewardedAdListener {
     override fun playAd() {
         super.playAd()
         if (rewardedAd?.canPlayAd() == true) {
-            rewardedAd?.play()
+            rewardedAd?.play(requireContext())
         }
     }
 

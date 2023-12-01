@@ -3,6 +3,7 @@
 buildscript {
     repositories {
         google()
+        mavenLocal()
         mavenCentral()
     }
     dependencies {
@@ -13,8 +14,10 @@ buildscript {
 allprojects {
     repositories {
         google()
+        mavenLocal()
         mavenCentral()
         maven { url "https://jitpack.io" }
+        maven { url "https://s01.oss.sonatype.org/content/groups/staging/" }
     }
 }
 

@@ -35,7 +35,7 @@ public class RewardedFragment extends AdExperienceFragment implements RewardedAd
     protected void playAd() {
         super.playAd();
         if (rewardedAd != null && rewardedAd.canPlayAd()) {
-            rewardedAd.play();
+            rewardedAd.play(requireContext());
         }
     }
 

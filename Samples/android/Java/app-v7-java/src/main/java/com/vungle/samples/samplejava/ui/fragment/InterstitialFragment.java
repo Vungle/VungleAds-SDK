@@ -26,7 +26,7 @@ public class InterstitialFragment extends AdExperienceFragment implements Inters
     protected void playAd() {
         super.playAd();
         if (interstitialAd != null && interstitialAd.canPlayAd()) {
-            interstitialAd.play();
+            interstitialAd.play(requireContext());
         }
     }
 

@@ -65,7 +65,7 @@ class InterstitialFragment : AdExperienceFragment(), InterstitialAdListener {
   override fun playAd() {
     super.playAd()
     if (interstitialAd?.canPlayAd() == true) {
-      interstitialAd?.play()
+      interstitialAd?.play(requireContext())
     }
   }
 
