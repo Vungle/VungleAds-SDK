@@ -57,7 +57,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
-    implementation 'com.vungle:vungle-ads:7.1.0'
+    implementation 'com.vungle:vungle-ads:7.3.0'
 
    // implementation 'com.github.vungle:vng-android-sdk:7.1.0-RC2'
 
