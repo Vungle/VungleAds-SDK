@@ -12,9 +12,9 @@ import com.vungle.ads.VungleAdSize
 import com.vungle.ads.VungleBannerView
 import com.vungle.ads.VungleError
 
-class MrecFragment : AdExperienceFragment(), BannerAdListener {
+class InlineFragment : AdExperienceFragment(), BannerAdListener {
 
-  private var mrecAd: VungleBannerView? = null
+  private var bannerAd: VungleBannerView? = null
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
@@ -24,14 +24,15 @@ class MrecFragment : AdExperienceFragment(), BannerAdListener {
 
   override fun loadAd() {
     super.loadAd()
-    mrecAd = VungleBannerView(requireContext(), placementId, VungleAdSize.MREC).apply {
-      adListener = this@MrecFragment
+    val vngSize = VungleAdSize.getAdSizeWithWidthAndHeight(300,200)
+    bannerAd = VungleBannerView(requireContext(), placementId, vngSize).apply {
+      adListener = this@InlineFragment
       load()
     }.also {
       val params = FrameLayout.LayoutParams(
         FrameLayout.LayoutParams.WRAP_CONTENT,
         FrameLayout.LayoutParams.WRAP_CONTENT,
-        Gravity.CENTER_HORIZONTAL
+        Gravity.CENTER
       )
       binding.adContainer.addView(it, params)
     }
@@ -39,8 +40,8 @@ class MrecFragment : AdExperienceFragment(), BannerAdListener {
 
   override fun destroyAd() {
     super.destroyAd()
-    mrecAd?.finishAd()
-    mrecAd?.adListener = null
+    bannerAd?.finishAd()
+    bannerAd?.adListener = null
   }
 
   override fun onAdLoaded(baseAd: BaseAd) {
@@ -75,7 +76,6 @@ class MrecFragment : AdExperienceFragment(), BannerAdListener {
   override fun onAdFailedToPlay(baseAd: BaseAd, adError: VungleError) {
     super.onAdFailedToPlay(baseAd, adError)
   }
-
   private fun configureUi() {
     binding.apply {
       lbPlacementId.text = placementId
@@ -86,13 +86,13 @@ class MrecFragment : AdExperienceFragment(), BannerAdListener {
 
   private fun bannerDimensionUi() {
     binding.apply{
-//      txtAdHeight.text = mrecAd?.adConfig?.adSize?.height.toString()
-//      txtAdWidth.text = mrecAd?.adConfig?.adSize?.width.toString()
+//      txtAdHeight.text = bannerAd?.adConfig?.adSize?.height.toString()
+//      txtAdWidth.text = bannerAd?.adConfig?.adSize?.width.toString()
     }
   }
 
   override fun onDestroyView() {
     super.onDestroyView()
-    mrecAd = null
+    bannerAd = null
   }
 }

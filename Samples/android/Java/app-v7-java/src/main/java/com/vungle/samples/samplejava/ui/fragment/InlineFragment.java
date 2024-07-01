@@ -2,14 +2,11 @@ package com.vungle.samples.samplejava.ui.fragment;
 
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.vungle.ads.BannerAdListener;
 import com.vungle.ads.BaseAd;
 import com.vungle.ads.VungleAdSize;
@@ -17,19 +14,9 @@ import com.vungle.ads.VungleBannerView;
 import com.vungle.ads.VungleError;
 import com.vungle.samples.samplejava.R;
 
-public class BannerFragment extends AdExperienceFragment implements BannerAdListener {
+public class InlineFragment extends AdExperienceFragment implements BannerAdListener {
 
     private VungleBannerView bannerAd;
-
-    public BannerFragment() {
-
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -42,7 +29,6 @@ public class BannerFragment extends AdExperienceFragment implements BannerAdList
         _binding.btnDestroyAd.setVisibility(View.VISIBLE);
         _binding.btnDestroyAd.setEnabled(false);
         setTextColor(_binding.btnDestroyAd, R.color.lightGray);
-
     }
 
     @Override
@@ -56,41 +42,34 @@ public class BannerFragment extends AdExperienceFragment implements BannerAdList
     }
 
     @Override
-    protected void playAd() {
-        super.playAd();
-    }
-
-    @Override
     protected void loadAd() {
         super.loadAd();
-        bannerAd = new VungleBannerView(requireActivity(), placementId, VungleAdSize.BANNER);
+        VungleAdSize vngAdSize = VungleAdSize.getAdSizeWithWidthAndHeight( 300, 200 );
+        bannerAd = new VungleBannerView(requireActivity(), placementId, vngAdSize);
         bannerAd.setAdListener(this);
         bannerAd.load("");
 
         ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(
             FrameLayout.LayoutParams.WRAP_CONTENT,
             FrameLayout.LayoutParams.WRAP_CONTENT,
-            Gravity.CENTER_HORIZONTAL);
+            Gravity.CENTER);
         _binding.adContainer.addView(bannerAd, params);
     }
 
     @Override
     public void onAdClicked(@NonNull BaseAd baseAd) {
         setTextColor(_binding.lbAdClick, R.color.black);
-
     }
 
     @Override
     public void onAdEnd(@NonNull BaseAd baseAd) {
         setTextColor(_binding.lbAdEnd, R.color.black);
-
     }
 
     @Override
     public void onAdFailedToLoad(@NonNull BaseAd baseAd, @NonNull VungleError vungleError) {
         setTextColor(_binding.lbError, R.color.black);
         _binding.lbError.setText(vungleError.getErrorMessage());
-
     }
 
     @Override
@@ -102,13 +81,11 @@ public class BannerFragment extends AdExperienceFragment implements BannerAdList
     @Override
     public void onAdImpression(@NonNull BaseAd baseAd) {
         setTextColor(_binding.lbAdImpression, R.color.black);
-
     }
 
     @Override
     public void onAdLeftApplication(@NonNull BaseAd baseAd) {
         setTextColor(_binding.lbOnAdLeftApplication, R.color.black);
-
     }
 
     @Override
@@ -125,6 +102,5 @@ public class BannerFragment extends AdExperienceFragment implements BannerAdList
         setTextColor(_binding.btnPlayAd, R.color.lightGray);
         _binding.btnDestroyAd.setEnabled(true);
         setTextColor(_binding.btnDestroyAd, R.color.black);
-
     }
 }

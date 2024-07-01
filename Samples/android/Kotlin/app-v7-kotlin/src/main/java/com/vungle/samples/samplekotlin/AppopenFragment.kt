@@ -1,20 +1,17 @@
 package com.vungle.samples.samplekotlin
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.View
-import android.widget.FrameLayout
 import com.vungle.samples.samplekotlin.ui.AdExperienceFragment
-import com.vungle.samples.samplekotlin.utils.extensions.show
-import com.vungle.ads.BannerAdListener
+import com.vungle.ads.AdConfig
 import com.vungle.ads.BaseAd
-import com.vungle.ads.VungleAdSize
-import com.vungle.ads.VungleBannerView
+import com.vungle.ads.InterstitialAd
+import com.vungle.ads.InterstitialAdListener
 import com.vungle.ads.VungleError
 
-class MrecFragment : AdExperienceFragment(), BannerAdListener {
+class AppopenFragment : AdExperienceFragment(), InterstitialAdListener {
 
-  private var mrecAd: VungleBannerView? = null
+  private var interstitialAd: InterstitialAd? = null
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
@@ -24,28 +21,17 @@ class MrecFragment : AdExperienceFragment(), BannerAdListener {
 
   override fun loadAd() {
     super.loadAd()
-    mrecAd = VungleBannerView(requireContext(), placementId, VungleAdSize.MREC).apply {
-      adListener = this@MrecFragment
-      load()
-    }.also {
-      val params = FrameLayout.LayoutParams(
-        FrameLayout.LayoutParams.WRAP_CONTENT,
-        FrameLayout.LayoutParams.WRAP_CONTENT,
-        Gravity.CENTER_HORIZONTAL
-      )
-      binding.adContainer.addView(it, params)
-    }
-  }
 
-  override fun destroyAd() {
-    super.destroyAd()
-    mrecAd?.finishAd()
-    mrecAd?.adListener = null
+    interstitialAd = InterstitialAd(requireContext(), placementId, AdConfig().apply {
+      adOrientation = AdConfig.AUTO_ROTATE
+    }).apply {
+      adListener = this@AppopenFragment
+      load()
+    }
   }
 
   override fun onAdLoaded(baseAd: BaseAd) {
     super.onAdLoaded(baseAd)
-    bannerDimensionUi()
   }
 
   override fun onAdStart(baseAd: BaseAd) {
@@ -76,23 +62,21 @@ class MrecFragment : AdExperienceFragment(), BannerAdListener {
     super.onAdFailedToPlay(baseAd, adError)
   }
 
-  private fun configureUi() {
-    binding.apply {
-      lbPlacementId.text = placementId
-      btnDestroyAd.show()
-      groupBanner.show()
+  override fun playAd() {
+    super.playAd()
+    if (interstitialAd?.canPlayAd() == true) {
+      interstitialAd?.play(requireContext())
     }
   }
 
-  private fun bannerDimensionUi() {
-    binding.apply{
-//      txtAdHeight.text = mrecAd?.adConfig?.adSize?.height.toString()
-//      txtAdWidth.text = mrecAd?.adConfig?.adSize?.width.toString()
-    }
+
+  private fun configureUi() {
+    binding.lbPlacementId.text = placementId
   }
 
   override fun onDestroyView() {
     super.onDestroyView()
-    mrecAd = null
+    interstitialAd?.adListener = null
+    interstitialAd = null
   }
 }

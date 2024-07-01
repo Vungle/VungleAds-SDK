@@ -15,12 +15,14 @@ import com.vungle.ads.BannerAdListener;
 import com.vungle.ads.BannerAdSize;
 import com.vungle.ads.BannerView;
 import com.vungle.ads.BaseAd;
+import com.vungle.ads.VungleAdSize;
+import com.vungle.ads.VungleBannerView;
 import com.vungle.ads.VungleError;
 import com.vungle.samples.samplejava.R;
 
 public class MrecFragment extends AdExperienceFragment implements BannerAdListener {
 
-    private BannerAd bannerAd;
+    private VungleBannerView bannerAd;
 
     public MrecFragment() {
 
@@ -50,7 +52,6 @@ public class MrecFragment extends AdExperienceFragment implements BannerAdListen
     protected void destroyAd() {
         super.destroyAd();
         if (bannerAd != null) {
-            _binding.adContainer.removeAllViews();
             bannerAd.finishAd();
             bannerAd.setAdListener(null);
             bannerAd = null;
@@ -60,22 +61,20 @@ public class MrecFragment extends AdExperienceFragment implements BannerAdListen
     @Override
     protected void playAd() {
         super.playAd();
-        if (bannerAd != null && bannerAd.canPlayAd()) {
-            BannerView bannerView = bannerAd.getBannerView();
-            ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(
-                    FrameLayout.LayoutParams.WRAP_CONTENT,
-                    FrameLayout.LayoutParams.WRAP_CONTENT,
-                    Gravity.CENTER_HORIZONTAL);
-            _binding.adContainer.addView(bannerView, params);
-        }
     }
 
     @Override
     protected void loadAd() {
         super.loadAd();
-        bannerAd = new BannerAd(requireActivity(), placementId, BannerAdSize.VUNGLE_MREC);
+        bannerAd = new VungleBannerView(requireActivity(), placementId, VungleAdSize.MREC);
         bannerAd.setAdListener(this);
         bannerAd.load("");
+
+        ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.WRAP_CONTENT,
+            FrameLayout.LayoutParams.WRAP_CONTENT,
+            Gravity.CENTER_HORIZONTAL);
+        _binding.adContainer.addView(bannerAd, params);
     }
 
     @Override

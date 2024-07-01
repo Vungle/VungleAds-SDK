@@ -1,6 +1,5 @@
 package com.vungle.samples.samplejava.ui.fragment;
 
-import static androidx.navigation.ViewKt.findNavController;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -13,12 +12,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.appbar.AppBarLayout;
 import com.vungle.ads.InitializationListener;
 import com.vungle.ads.VungleAds;
 import com.vungle.ads.VungleError;
@@ -37,6 +34,9 @@ public class PlacementFragment extends Fragment {
     private static final String MREC_PLACEMENT = "MREC_NON_BIDDING-4205088";
     private static final String BANNER_PLACEMENT = "BANNER_NON_BIDDING-4570799";
     private static final String NATIVE_PLACEMENT = "NATIVE_NON_BIDDING-7989926";
+    private static final String APPOPEN_PLACEMENT = "APPOPEN_NON_BIDDING-0475560";
+    private static final String INLINE_PLACEMENT = "";//TODO
+
     FragmentPlacementBinding binding = null;
 
     private boolean isSDKInitialized = false;
@@ -53,7 +53,7 @@ public class PlacementFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         TextView lbSDKVersion = binding.getRoot().findViewById(R.id.lbSdkVersion);
-        lbSDKVersion.setText(com.vungle.ads.BuildConfig.VERSION_NAME);
+        lbSDKVersion.setText(VungleAds.getSdkVersion());
 
         RecyclerView recyclerView = binding.tblPlacementList;
         recyclerView.addItemDecoration(new DividerItemDecoration(requireActivity(), DividerItemDecoration.VERTICAL));
@@ -64,6 +64,8 @@ public class PlacementFragment extends Fragment {
         itemList.add(new PlacementAdapter.Item("MREC", MREC_PLACEMENT));
         itemList.add(new PlacementAdapter.Item("Banner", BANNER_PLACEMENT));
         itemList.add(new PlacementAdapter.Item("Native", NATIVE_PLACEMENT));
+        itemList.add(new PlacementAdapter.Item("Appopen", APPOPEN_PLACEMENT));
+        itemList.add(new PlacementAdapter.Item("Inline", INLINE_PLACEMENT));
 
         if (!VungleAds.isInitialized()) {
             VungleAds.init(requireActivity(), APP_ID, new InitializationListener() {
@@ -109,6 +111,12 @@ public class PlacementFragment extends Fragment {
                     break;
                 case "Native":
                     destination = R.id.action_nav_placement_list_to_nav_nativead;
+                    break;
+                case "Appopen":
+                    destination = R.id.action_nav_placement_list_to_nav_appopenad;
+                    break;
+                case "Inline":
+                    destination = R.id.action_nav_placement_list_to_nav_inlinead;
                     break;
 
             }
