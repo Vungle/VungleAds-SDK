@@ -17,11 +17,6 @@ public class AppopenFragment extends AdExperienceFragment implements Interstitia
     }
 
     @Override
-    protected void destroyAd() {
-        super.destroyAd();
-    }
-
-    @Override
     protected void playAd() {
         super.playAd();
         if (interstitialAd != null && interstitialAd.canPlayAd()) {
@@ -62,13 +57,11 @@ public class AppopenFragment extends AdExperienceFragment implements Interstitia
     @Override
     public void onAdImpression(@NonNull BaseAd baseAd) {
         setTextColor(_binding.lbAdImpression, R.color.black);
-
     }
 
     @Override
     public void onAdLeftApplication(@NonNull BaseAd baseAd) {
         setTextColor(_binding.lbOnAdLeftApplication, R.color.black);
-
     }
 
     @Override
@@ -76,7 +69,6 @@ public class AppopenFragment extends AdExperienceFragment implements Interstitia
         setTextColor(_binding.lbAdLoaded, R.color.black);
         _binding.btnPlayAd.setEnabled(true);
         setTextColor(_binding.btnPlayAd, R.color.black);
-
     }
 
     @Override
@@ -84,6 +76,5 @@ public class AppopenFragment extends AdExperienceFragment implements Interstitia
         setTextColor(_binding.lbAdStart, R.color.black);
         _binding.btnPlayAd.setEnabled(false);
         setTextColor(_binding.btnPlayAd, R.color.lightGray);
-
     }
 }

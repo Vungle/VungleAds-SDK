@@ -37,10 +37,6 @@ class MrecFragment : AdExperienceFragment(), BannerAdListener {
     }
   }
 
-  override fun playAd() {
-    super.playAd()
-  }
-
   override fun destroyAd() {
     super.destroyAd()
     mrecAd?.finishAd()

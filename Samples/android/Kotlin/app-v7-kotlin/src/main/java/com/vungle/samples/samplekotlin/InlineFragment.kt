@@ -38,10 +38,6 @@ class InlineFragment : AdExperienceFragment(), BannerAdListener {
     }
   }
 
-  override fun playAd() {
-    super.playAd()
-  }
-
   override fun destroyAd() {
     super.destroyAd()
     bannerAd?.finishAd()
