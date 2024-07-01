@@ -12,7 +12,7 @@ import com.vungle.ads.VungleAdSize
 import com.vungle.ads.VungleBannerView
 import com.vungle.ads.VungleError
 
-class BannerFragment : AdExperienceFragment(), BannerAdListener {
+class InlineFragment : AdExperienceFragment(), BannerAdListener {
 
   private var bannerAd: VungleBannerView? = null
 
@@ -24,14 +24,15 @@ class BannerFragment : AdExperienceFragment(), BannerAdListener {
 
   override fun loadAd() {
     super.loadAd()
-    bannerAd = VungleBannerView(requireContext(), placementId, VungleAdSize.BANNER).apply {
-      adListener = this@BannerFragment
+    val vngSize = VungleAdSize.getAdSizeWithWidthAndHeight(300,200)
+    bannerAd = VungleBannerView(requireContext(), placementId, vngSize).apply {
+      adListener = this@InlineFragment
       load()
     }.also {
       val params = FrameLayout.LayoutParams(
         FrameLayout.LayoutParams.WRAP_CONTENT,
         FrameLayout.LayoutParams.WRAP_CONTENT,
-        Gravity.CENTER_HORIZONTAL
+        Gravity.CENTER
       )
       binding.adContainer.addView(it, params)
     }

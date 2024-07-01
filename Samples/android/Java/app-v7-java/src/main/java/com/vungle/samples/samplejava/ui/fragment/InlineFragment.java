@@ -6,10 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.vungle.ads.BannerAdListener;
 import com.vungle.ads.BaseAd;
 import com.vungle.ads.VungleAdSize;
@@ -17,11 +15,11 @@ import com.vungle.ads.VungleBannerView;
 import com.vungle.ads.VungleError;
 import com.vungle.samples.samplejava.R;
 
-public class BannerFragment extends AdExperienceFragment implements BannerAdListener {
+public class InlineFragment extends AdExperienceFragment implements BannerAdListener {
 
     private VungleBannerView bannerAd;
 
-    public BannerFragment() {
+    public InlineFragment() {
 
     }
 
@@ -63,7 +61,8 @@ public class BannerFragment extends AdExperienceFragment implements BannerAdList
     @Override
     protected void loadAd() {
         super.loadAd();
-        bannerAd = new VungleBannerView(requireActivity(), placementId, VungleAdSize.BANNER);
+        VungleAdSize vngAdSize = VungleAdSize.getAdSizeWithWidthAndHeight( 300, 200 );
+        bannerAd = new VungleBannerView(requireActivity(), placementId, vngAdSize);
         bannerAd.setAdListener(this);
         bannerAd.load("");
 

@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,6 +27,8 @@ class PlacementFragment : Fragment(R.layout.fragment_placement) {
         const val MREC_PLACEMENT = "MREC_NON_BIDDING-4205088"
         const val BANNER_PLACEMENT = "BANNER_NON_BIDDING-4570799"
         const val NATIVE_PLACEMENT = "NATIVE_NON_BIDDING-7989926"
+        const val APPOPEN_PLACEMENT = "APPOPEN_NON_BIDDING-0475560"
+        const val INLINE_PLACEMENT = ""//TODO
     }
 
     private var _binding: FragmentPlacementBinding? = null
@@ -51,6 +54,9 @@ class PlacementFragment : Fragment(R.layout.fragment_placement) {
                 Log.d(TAG, "onError(): ${vungleError.localizedMessage}")
             }
         })
+
+        val lbSDKVersion: TextView = binding.root.findViewById(R.id.lbSdkVersion)
+        lbSDKVersion.text = VungleAds.getSdkVersion()
 
         val itemList: MutableList<PlacementAdapter.Item> = mutableListOf()
         itemList.add(
@@ -79,6 +85,16 @@ class PlacementFragment : Fragment(R.layout.fragment_placement) {
                 "Native", NATIVE_PLACEMENT
             )
         )
+        itemList.add(
+            PlacementAdapter.Item(
+                "Appopen", APPOPEN_PLACEMENT
+            )
+        )
+        itemList.add(
+            PlacementAdapter.Item(
+                "Inline", INLINE_PLACEMENT
+            )
+        )
 
         binding.tblPlacementList.apply {
             layoutManager = LinearLayoutManager(activity)
@@ -89,6 +105,8 @@ class PlacementFragment : Fragment(R.layout.fragment_placement) {
                         contains("Banner") -> R.id.action_nav_placement_list_to_nav_banner
                         contains("MREC") -> R.id.action_nav_placement_list_to_nav_mrec
                         contains("Native") -> R.id.action_nav_placement_list_to_nav_nativead
+                        contains("Appopen") -> R.id.action_nav_placement_list_to_nav_appopenad
+                        contains("Inline") -> R.id.action_nav_placement_list_to_nav_inlinead
                         else -> R.id.action_nav_placement_list_to_nav_interstitial
                     }
                 }

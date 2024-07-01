@@ -29,6 +29,14 @@
         <action
             android:id="@+id/action_nav_placement_list_to_nav_nativead"
             app:destination="@id/fragNativeAd" />
+
+        <action
+          android:id="@+id/action_nav_placement_list_to_nav_appopenad"
+          app:destination="@id/fragAppopenAd" />
+
+        <action
+          android:id="@+id/action_nav_placement_list_to_nav_inlinead"
+          app:destination="@id/fragInlineAd" />
     </fragment>
 
     <fragment
@@ -55,5 +63,15 @@
         android:id="@+id/fragNativeAd"
         android:name="com.vungle.samples.samplekotlin.NativeAdFragment"
         android:label="Native Ad"/>
+
+    <fragment
+      android:id="@+id/fragAppopenAd"
+      android:name="com.vungle.samples.samplekotlin.AppopenFragment"
+      android:label="Appopen Ad"/>
+
+    <fragment
+      android:id="@+id/fragInlineAd"
+      android:name="com.vungle.samples.samplekotlin.InlineFragment"
+      android:label="Inline Ad"/>
 
 </navigation>

@@ -6,16 +6,15 @@ import android.view.View
 import android.widget.FrameLayout
 import com.vungle.samples.samplekotlin.ui.AdExperienceFragment
 import com.vungle.samples.samplekotlin.utils.extensions.show
-import com.vungle.ads.BannerAdSize
-import com.vungle.ads.BannerAd
 import com.vungle.ads.BannerAdListener
-import com.vungle.ads.BannerView
 import com.vungle.ads.BaseAd
+import com.vungle.ads.VungleAdSize
+import com.vungle.ads.VungleBannerView
 import com.vungle.ads.VungleError
 
 class MrecFragment : AdExperienceFragment(), BannerAdListener {
 
-  private var mrecAd: BannerAd? = null
+  private var mrecAd: VungleBannerView? = null
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
@@ -25,39 +24,32 @@ class MrecFragment : AdExperienceFragment(), BannerAdListener {
 
   override fun loadAd() {
     super.loadAd()
-    mrecAd = BannerAd(requireContext(), placementId, BannerAdSize.VUNGLE_MREC).apply {
+    mrecAd = VungleBannerView(requireContext(), placementId, VungleAdSize.MREC).apply {
       adListener = this@MrecFragment
       load()
+    }.also {
+      val params = FrameLayout.LayoutParams(
+        FrameLayout.LayoutParams.WRAP_CONTENT,
+        FrameLayout.LayoutParams.WRAP_CONTENT,
+        Gravity.CENTER_HORIZONTAL
+      )
+      binding.adContainer.addView(it, params)
     }
   }
 
   override fun playAd() {
     super.playAd()
-    if (mrecAd?.canPlayAd() == true) {
-      mrecAd?.let {
-        val bannerView: BannerView? = mrecAd?.getBannerView()
-        val params = FrameLayout.LayoutParams(
-          FrameLayout.LayoutParams.WRAP_CONTENT,
-          FrameLayout.LayoutParams.WRAP_CONTENT,
-          Gravity.CENTER_HORIZONTAL
-        )
-        binding.adContainer.addView(bannerView, params)
-      }
-      bannerDimensionUi()
-    }
   }
 
   override fun destroyAd() {
     super.destroyAd()
-    binding.btnDestroyAd.setOnClickListener {
-      binding.adContainer.removeAllViews()
-      mrecAd?.finishAd()
-      mrecAd = null
-    }
+    mrecAd?.finishAd()
+    mrecAd?.adListener = null
   }
 
   override fun onAdLoaded(baseAd: BaseAd) {
     super.onAdLoaded(baseAd)
+    bannerDimensionUi()
   }
 
   override fun onAdStart(baseAd: BaseAd) {
@@ -105,7 +97,6 @@ class MrecFragment : AdExperienceFragment(), BannerAdListener {
 
   override fun onDestroyView() {
     super.onDestroyView()
-    mrecAd?.adListener = null
     mrecAd = null
   }
 }
