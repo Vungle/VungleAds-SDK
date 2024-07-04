@@ -28,7 +28,8 @@ class PlacementFragment : Fragment(R.layout.fragment_placement) {
         const val BANNER_PLACEMENT = "BANNER_NON_BIDDING-4570799"
         const val NATIVE_PLACEMENT = "NATIVE_NON_BIDDING-7989926"
         const val APPOPEN_PLACEMENT = "APPOPEN_NON_BIDDING-0475560"
-        const val INLINE_PLACEMENT = ""//TODO
+        const val INLINE_PLACEMENT = "INLINE_NON_BIDDING-1682224"
+        const val INLINE_FEED_PLACEMENT = INLINE_PLACEMENT
     }
 
     private var _binding: FragmentPlacementBinding? = null
@@ -95,6 +96,16 @@ class PlacementFragment : Fragment(R.layout.fragment_placement) {
                 "Inline", INLINE_PLACEMENT
             )
         )
+        itemList.add(
+            PlacementAdapter.Item(
+                "InlineFeedVertical", INLINE_FEED_PLACEMENT
+            )
+        )
+        itemList.add(
+            PlacementAdapter.Item(
+                "InlineFeedHorizontal", INLINE_FEED_PLACEMENT
+            )
+        )
 
         binding.tblPlacementList.apply {
             layoutManager = LinearLayoutManager(activity)
@@ -106,12 +117,19 @@ class PlacementFragment : Fragment(R.layout.fragment_placement) {
                         contains("MREC") -> R.id.action_nav_placement_list_to_nav_mrec
                         contains("Native") -> R.id.action_nav_placement_list_to_nav_nativead
                         contains("Appopen") -> R.id.action_nav_placement_list_to_nav_appopenad
-                        contains("Inline") -> R.id.action_nav_placement_list_to_nav_inlinead
+                        equals("Inline") -> R.id.action_nav_placement_list_to_nav_inlinead
+                        contains("InlineFeed") -> R.id.action_nav_placement_list_to_nav_inline_feedad
                         else -> R.id.action_nav_placement_list_to_nav_interstitial
                     }
                 }
                 val bundle = Bundle()
                 bundle.putString("placement_id", adItem.placementId)
+                if (adItem.placementType.contains("InlineFeed")) {
+                    bundle.putString(
+                        "orientation",
+                        if (adItem.placementType.contains("Horizontal")) "horizontal" else "vertical"
+                    )
+                }
                 findNavController().navigate(destination, bundle)
             }
         }
