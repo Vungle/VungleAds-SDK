@@ -18,6 +18,7 @@
 #import "LOBannerViewController.h"
 #import "LORewardedViewController.h"
 #import "LOMRECViewController.h"
+#import "LOInlineViewController.h"
 
 @interface PlacementSelectionTableViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *placementArr;
@@ -133,8 +134,10 @@
   } else if ([segue.identifier isEqualToString:@"toMRECSegue"]) {
     LOMRECViewController *vc = (LOMRECViewController *)segue.destinationViewController;
     vc.placementId = (NSString *)sender;
+  } else if ([segue.identifier isEqualToString:@"toInlineSegue"]) {
+    LOInlineViewController *vc = (LOInlineViewController *)segue.destinationViewController;
+    vc.placementId = (NSString *)sender;
   }
-
 }
 
 #pragma mark UITableViewDelegate, UITableViewDatasource Methods
@@ -168,6 +171,8 @@
       segueIdentifier = @"toNativeSegue";
     } else if ([selectedAdType isEqualToString:@"MREC"]) {
       segueIdentifier = @"toMRECSegue";
+    } else if ([selectedAdType isEqualToString:@"Inline"]) {
+      segueIdentifier = @"toInlineSegue";
     } else if ([selectedAdType isEqualToString:@"Rewarded"] || [selectedAdType isEqualToString:@"Rewarded Playable"]) {
       segueIdentifier = @"toRewardedSegue";
     }
