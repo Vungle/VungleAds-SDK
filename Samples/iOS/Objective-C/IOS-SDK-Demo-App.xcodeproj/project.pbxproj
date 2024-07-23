@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B87A9212C3E54CD0056D11F /* LOInlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B87A9202C3E54CD0056D11F /* LOInlineViewController.m */; };
 		A42D5ECD29D78D12002F7A30 /* LOMRECViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42D5ECC29D78D12002F7A30 /* LOMRECViewController.m */; };
 		A444994C29D5FAF800C606BF /* AppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A444994B29D5FAF800C606BF /* AppUtil.m */; };
 		A444995029D5FBD100C606BF /* CallbackLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A444994F29D5FBD100C606BF /* CallbackLog.m */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		08EE112C0407917F8CF64A32 /* libPods-IOS-SDK-Demo-App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IOS-SDK-Demo-App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B87A91F2C3E54CD0056D11F /* LOInlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOInlineViewController.h; sourceTree = "<group>"; };
+		5B87A9202C3E54CD0056D11F /* LOInlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOInlineViewController.m; sourceTree = "<group>"; };
 		84FF0BE07F7C17499397A72F /* Pods-IOS-SDK-Demo-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS-SDK-Demo-App.debug.xcconfig"; path = "Target Support Files/Pods-IOS-SDK-Demo-App/Pods-IOS-SDK-Demo-App.debug.xcconfig"; sourceTree = "<group>"; };
 		A42D5ECB29D78D12002F7A30 /* LOMRECViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOMRECViewController.h; sourceTree = "<group>"; };
 		A42D5ECC29D78D12002F7A30 /* LOMRECViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOMRECViewController.m; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				A4D3B1F029D4E4E800924D16 /* LORewardedViewController.m */,
 				A42D5ECB29D78D12002F7A30 /* LOMRECViewController.h */,
 				A42D5ECC29D78D12002F7A30 /* LOMRECViewController.m */,
+				5B87A91F2C3E54CD0056D11F /* LOInlineViewController.h */,
+				5B87A9202C3E54CD0056D11F /* LOInlineViewController.m */,
 			);
 			path = "Ad Formats";
 			sourceTree = "<group>";
@@ -187,7 +192,6 @@
 				84FF0BE07F7C17499397A72F /* Pods-IOS-SDK-Demo-App.debug.xcconfig */,
 				C3ABF6D796008E4517BDF971 /* Pods-IOS-SDK-Demo-App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -306,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B87A9212C3E54CD0056D11F /* LOInlineViewController.m in Sources */,
 				A4D3B1F529D4E4E800924D16 /* LOInterstitialViewController.m in Sources */,
 				A477CD5C29CBC267003224C0 /* AppDelegate.m in Sources */,
 				A444994C29D5FAF800C606BF /* AppUtil.m in Sources */,

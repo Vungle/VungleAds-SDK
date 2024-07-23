@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lZ8-1T-gez">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lZ8-1T-gez">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -141,6 +141,7 @@
                         <segue destination="J9s-6G-hjn" kind="show" identifier="toBannerSegue" id="JYi-mp-fhX"/>
                         <segue destination="d8P-LL-FiT" kind="show" identifier="toMRECSegue" id="EPM-gr-t3P"/>
                         <segue destination="gQk-Rs-hlE" kind="show" identifier="toNativeSegue" id="obF-kv-vin"/>
+                        <segue destination="c5e-fM-DQN" kind="show" identifier="toInlineSegue" id="qaX-e7-vuU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhd-om-TAP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1123,6 +1124,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r82-Lg-LdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3243.5114503816794" y="765.49295774647896"/>
+        </scene>
+        <!--Inline View Controller-->
+        <scene sceneID="vfh-vX-ltS">
+            <objects>
+                <viewController id="c5e-fM-DQN" customClass="LOInlineViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="61L-a5-0S0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oMw-hs-EUo">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InlineCell" id="ZYe-mB-av7">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZYe-mB-av7" id="XHI-R4-shR">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="c5e-fM-DQN" id="KeL-nv-OgR"/>
+                                    <outlet property="delegate" destination="c5e-fM-DQN" id="eOU-le-Ag1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ytu-fV-KxO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ytu-fV-KxO" firstAttribute="trailing" secondItem="oMw-hs-EUo" secondAttribute="trailing" id="2bH-DR-hEp"/>
+                            <constraint firstItem="oMw-hs-EUo" firstAttribute="leading" secondItem="ytu-fV-KxO" secondAttribute="leading" id="Adz-By-gPh"/>
+                            <constraint firstItem="ytu-fV-KxO" firstAttribute="bottom" secondItem="oMw-hs-EUo" secondAttribute="bottom" id="s1A-C1-hVg"/>
+                            <constraint firstItem="oMw-hs-EUo" firstAttribute="top" secondItem="ytu-fV-KxO" secondAttribute="top" id="wcW-q7-5iQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AhE-80-DE8"/>
+                    <connections>
+                        <outlet property="tableView" destination="oMw-hs-EUo" id="spU-q6-jpK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBJ-sH-35m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4085" y="715"/>
         </scene>
     </scenes>
     <resources>

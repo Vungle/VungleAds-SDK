@@ -143,6 +143,10 @@ extension PlacementSelectionTableViewController: UITableViewDelegate, UITableVie
             if let cell = tableView.cellForRow(at: indexPath) as? PlacementTableViewCell {
                 self.performSegue(withIdentifier: "toRewardedSegue", sender:cell.placementLbl.text)
             }
+        } else if selectedAdType == "Inline" {
+            if let cell = tableView.cellForRow(at: indexPath) as? PlacementTableViewCell {
+                self.performSegue(withIdentifier: "toInlineSegue", sender:cell.placementLbl.text)
+            }
         } else {
 
             // Display popup indicating that this ad format is not yet supported
@@ -172,6 +176,10 @@ extension PlacementSelectionTableViewController: UITableViewDelegate, UITableVie
         } else if segue.identifier == "toMRECSegue" {
             let vc = segue.destination as! LOMRECViewController
             vc.placementId = sender as? String
+        } else if segue.identifier == "toInlineSegue" {
+            let vc = segue.destination as! LOInlineViewController
+            vc.placementId = sender as? String
         }
+
     }
 }

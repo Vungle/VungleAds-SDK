@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B87A91C2C3D10950056D11F /* LOInlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87A91B2C3D10950056D11F /* LOInlineViewController.swift */; };
+		5B87A91E2C3D13920056D11F /* InlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87A91D2C3D13920056D11F /* InlineCell.swift */; };
 		8C30DA59295CD92B006C9A49 /* PlacementSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30DA58295CD92B006C9A49 /* PlacementSelectionTableViewController.swift */; };
 		8C30DA60295E38D7006C9A49 /* PlacmentIDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30DA5F295E38D7006C9A49 /* PlacmentIDTableViewCell.swift */; };
 		8C30DA64295E78EC006C9A49 /* LOInterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30DA63295E78EC006C9A49 /* LOInterstitialViewController.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B87A91B2C3D10950056D11F /* LOInlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOInlineViewController.swift; sourceTree = "<group>"; };
+		5B87A91D2C3D13920056D11F /* InlineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineCell.swift; sourceTree = "<group>"; };
 		8C30DA58295CD92B006C9A49 /* PlacementSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementSelectionTableViewController.swift; sourceTree = "<group>"; };
 		8C30DA5F295E38D7006C9A49 /* PlacmentIDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacmentIDTableViewCell.swift; sourceTree = "<group>"; };
 		8C30DA63295E78EC006C9A49 /* LOInterstitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOInterstitialViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +70,6 @@
 				BC99C8226516774E0F160D80 /* Pods-IOS-SDK-Demo-App.debug.xcconfig */,
 				8E4A1C093E021ED2885DD570 /* Pods-IOS-SDK-Demo-App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,6 +86,7 @@
 			children = (
 				8C30DA5F295E38D7006C9A49 /* PlacmentIDTableViewCell.swift */,
 				8C30DA6C2964E8C2006C9A49 /* CallbackLogTableViewCell.swift */,
+				5B87A91D2C3D13920056D11F /* InlineCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -95,6 +99,7 @@
 				8C30DA68295E7A9C006C9A49 /* LOBannerViewController.swift */,
 				8C30DA6A295E7AA8006C9A49 /* LONativeAdViewController.swift */,
 				8CF1B5BA2970E81A002168FE /* LOMRECViewController.swift */,
+				5B87A91B2C3D10950056D11F /* LOInlineViewController.swift */,
 			);
 			path = "Ad Formats";
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B87A91C2C3D10950056D11F /* LOInlineViewController.swift in Sources */,
 				8C30DA69295E7A9C006C9A49 /* LOBannerViewController.swift in Sources */,
 				8C30DA6B295E7AA8006C9A49 /* LONativeAdViewController.swift in Sources */,
 				8CF1B5BB2970E81A002168FE /* LOMRECViewController.swift in Sources */,
@@ -281,6 +287,7 @@
 				8C30DA59295CD92B006C9A49 /* PlacementSelectionTableViewController.swift in Sources */,
 				8C30DA67295E7A89006C9A49 /* LORewardedViewController.swift in Sources */,
 				8C30DA6D2964E8C2006C9A49 /* CallbackLogTableViewCell.swift in Sources */,
+				5B87A91E2C3D13920056D11F /* InlineCell.swift in Sources */,
 				8C30DA60295E38D7006C9A49 /* PlacmentIDTableViewCell.swift in Sources */,
 				8C74C2B8294D1FE600CF2FF0 /* AppDelegate.swift in Sources */,
 				8C74C2BA294D1FE600CF2FF0 /* SceneDelegate.swift in Sources */,
