@@ -55,7 +55,7 @@ extension LOInlineViewController: VungleBannerViewDelegate {
         var adModel = InlineModel()
         adModel.isAd = true
         adModel.cellHeight = 300
-        models.insert(adModel, at: 1)
+        models.append(adModel)
         adCell.contentView.addSubview(bannerView)
         tableView.reloadData()
     }
