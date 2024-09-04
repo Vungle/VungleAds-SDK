@@ -35,7 +35,8 @@ public class PlacementFragment extends Fragment {
     private static final String BANNER_PLACEMENT = "BANNER_NON_BIDDING-4570799";
     private static final String NATIVE_PLACEMENT = "NATIVE_NON_BIDDING-7989926";
     private static final String APPOPEN_PLACEMENT = "APPOPEN_NON_BIDDING-0475560";
-    private static final String INLINE_PLACEMENT = "";//TODO
+    private static final String INLINE_PLACEMENT = "INLINE_NON_BIDDING-1682224";
+    private static final String INLINE_FEED_PLACEMENT = INLINE_PLACEMENT;
 
     FragmentPlacementBinding binding = null;
 
@@ -66,6 +67,8 @@ public class PlacementFragment extends Fragment {
         itemList.add(new PlacementAdapter.Item("Native", NATIVE_PLACEMENT));
         itemList.add(new PlacementAdapter.Item("Appopen", APPOPEN_PLACEMENT));
         itemList.add(new PlacementAdapter.Item("Inline", INLINE_PLACEMENT));
+        itemList.add(new PlacementAdapter.Item("InlineFeedVertical", INLINE_FEED_PLACEMENT));
+        itemList.add(new PlacementAdapter.Item("InlineFeedHorizontal", INLINE_FEED_PLACEMENT));
 
         if (!VungleAds.isInitialized()) {
             VungleAds.init(requireActivity(), APP_ID, new InitializationListener() {
@@ -118,10 +121,22 @@ public class PlacementFragment extends Fragment {
                 case "Inline":
                     destination = R.id.action_nav_placement_list_to_nav_inlinead;
                     break;
+                case "InlineFeedVertical":
+                case "InlineFeedHorizontal":
+                    destination = R.id.action_nav_placement_list_to_nav_inline_feedad;
+                    break;
 
             }
             Bundle bundle = new Bundle();
             bundle.putString("placement_id", item.getPlacementId());
+            switch (item.getPlacementType()) {
+                case "InlineFeedHorizontal":
+                    bundle.putString( "orientation", "horizontal" );
+                    break;
+                case "InlineFeedVertical":
+                    bundle.putString( "orientation", "vertical" );
+                    break;
+            }
 
             NavHostFragment.findNavController(PlacementFragment.this).navigate(destination, bundle);
 

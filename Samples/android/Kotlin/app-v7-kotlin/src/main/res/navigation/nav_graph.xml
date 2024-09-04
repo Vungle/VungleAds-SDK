@@ -37,6 +37,10 @@
         <action
           android:id="@+id/action_nav_placement_list_to_nav_inlinead"
           app:destination="@id/fragInlineAd" />
+
+        <action
+          android:id="@+id/action_nav_placement_list_to_nav_inline_feedad"
+          app:destination="@id/fragInlineFeedAd" />
     </fragment>
 
     <fragment
@@ -73,5 +77,10 @@
       android:id="@+id/fragInlineAd"
       android:name="com.vungle.samples.samplekotlin.InlineFragment"
       android:label="Inline Ad"/>
+
+    <fragment
+      android:id="@+id/fragInlineFeedAd"
+      android:name="com.vungle.samples.samplekotlin.feed.InlineFeedFragment"
+      android:label="Inline Feed Ad"/>
 
 </navigation>
