@@ -147,6 +147,10 @@ extension PlacementSelectionTableViewController: UITableViewDelegate, UITableVie
             if let cell = tableView.cellForRow(at: indexPath) as? PlacementTableViewCell {
                 self.performSegue(withIdentifier: "toInlineSegue", sender:cell.placementLbl.text)
             }
+        } else if selectedAdType == "InterScroller" {
+            if let cell = tableView.cellForRow(at: indexPath) as? PlacementTableViewCell {
+                self.performSegue(withIdentifier: "toInterSegue", sender:cell.placementLbl.text)
+            }
         } else {
 
             // Display popup indicating that this ad format is not yet supported
@@ -179,7 +183,9 @@ extension PlacementSelectionTableViewController: UITableViewDelegate, UITableVie
         } else if segue.identifier == "toInlineSegue" {
             let vc = segue.destination as! LOInlineViewController
             vc.placementId = sender as? String
+        } else if segue.identifier == "toInterSegue" {
+            let vc = segue.destination as! LOInterScrollerViewController
+            vc.placementId = sender as? String
         }
-
     }
 }

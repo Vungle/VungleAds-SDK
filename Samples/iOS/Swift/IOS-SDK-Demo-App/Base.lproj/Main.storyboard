@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ly-eb-Tbg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ly-eb-Tbg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -119,6 +119,7 @@
                         <segue destination="lqy-35-2Qn" kind="show" identifier="toRewardedSegue" id="hcc-Al-BO8"/>
                         <segue destination="KVH-9B-JYu" kind="show" identifier="toMRECSegue" id="w1c-P5-e6W"/>
                         <segue destination="xOH-ka-TJ8" kind="show" identifier="toInlineSegue" id="mnn-jj-iKc"/>
+                        <segue destination="jxr-nT-q48" kind="show" identifier="toInterSegue" id="Dd2-IU-fzj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JrW-Nd-tUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1063,10 +1064,100 @@
             </objects>
             <point key="canvasLocation" x="2178" y="1535"/>
         </scene>
+        <!--Inter Scroller View Controller-->
+        <scene sceneID="J5o-F9-q4r">
+            <objects>
+                <viewController id="jxr-nT-q48" customClass="LOInterScrollerViewController" customModule="IOS_SDK_Demo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QTI-Ix-lhW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbQ-bJ-35H" userLabel="MainScrollView">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Zl-MD-9PL">
+                                        <rect key="frame" x="0.0" y="789.5" width="414" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Yha-ii-cAX"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wt7-4W-8x2" userLabel="TopTextView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="789.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">If there was one word to describe the current state of the ad ecosystem, it would be polluted. Obtrusive ads sully digital-safe havens and contaminate good content. Consumers are constantly wading through unwanted ads, while publishers and advertisers are at risk of having their brand reputation tarnished with irrelevant or inappropriate ad placements. Not quite an environmental catastrophe, but the trash is definitely starting to pile up.
+
+    Could interscroller ads be the key to cleaning up the mobile ad environment for good? Don’t wait to find out. Let’s explore the ins and outs of full-screen mobile ads and how they can benefit your brand.
+
+    The Lowdown on Interscroller Ads.
+
+    With so many types of ad formats out there, it’s no wonder the advertising environment is polluted. Sticky banner ads and annoying pop-ups meant to grab consumer attention end up distracting from the content of a web page and turn consumers away. Now is the time for brands to take out the trash and invest in high-impact creative formats that deliver results.
+
+    Interscroller ads are just that. These highly visible, highly-engaging digital ads are ideal for grabbing consumer attention without disrupting their experience or the content. They work by revealing content as a reader scrolls down a visited page. When the user scrolls to reveal 85% of the placement, it can snap to take over the entire screen.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-ma-XdL" userLabel="BottomTextView">
+                                        <rect key="frame" x="0.0" y="989.5" width="414" height="789.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">If there was one word to describe the current state of the ad ecosystem, it would be polluted. Obtrusive ads sully digital-safe havens and contaminate good content. Consumers are constantly wading through unwanted ads, while publishers and advertisers are at risk of having their brand reputation tarnished with irrelevant or inappropriate ad placements. Not quite an environmental catastrophe, but the trash is definitely starting to pile up.
+
+    Could interscroller ads be the key to cleaning up the mobile ad environment for good? Don’t wait to find out. Let’s explore the ins and outs of full-screen mobile ads and how they can benefit your brand.
+
+    The Lowdown on Interscroller Ads.
+
+    With so many types of ad formats out there, it’s no wonder the advertising environment is polluted. Sticky banner ads and annoying pop-ups meant to grab consumer attention end up distracting from the content of a web page and turn consumers away. Now is the time for brands to take out the trash and invest in high-impact creative formats that deliver results.
+
+    Interscroller ads are just that. These highly visible, highly-engaging digital ads are ideal for grabbing consumer attention without disrupting their experience or the content. They work by revealing content as a reader scrolls down a visited page. When the user scrolls to reveal 85% of the placement, it can snap to take over the entire screen.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4Zl-MD-9PL" secondAttribute="trailing" id="DKM-ns-IF4"/>
+                                    <constraint firstItem="4Zl-MD-9PL" firstAttribute="leading" secondItem="FbQ-bJ-35H" secondAttribute="leading" id="El3-ni-wSA"/>
+                                    <constraint firstAttribute="bottom" secondItem="uXK-ma-XdL" secondAttribute="bottom" id="Qms-hE-URp"/>
+                                    <constraint firstItem="Wt7-4W-8x2" firstAttribute="top" secondItem="FbQ-bJ-35H" secondAttribute="top" id="TrQ-2l-nWs"/>
+                                    <constraint firstItem="Wt7-4W-8x2" firstAttribute="centerX" secondItem="FbQ-bJ-35H" secondAttribute="centerX" id="Ymi-Q3-m8T"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wt7-4W-8x2" secondAttribute="trailing" id="c80-Bi-GZc"/>
+                                    <constraint firstItem="Wt7-4W-8x2" firstAttribute="leading" secondItem="FbQ-bJ-35H" secondAttribute="leading" id="d2t-iM-2X6"/>
+                                    <constraint firstItem="uXK-ma-XdL" firstAttribute="top" secondItem="4Zl-MD-9PL" secondAttribute="bottom" id="dcL-Co-OaY"/>
+                                    <constraint firstItem="4Zl-MD-9PL" firstAttribute="top" secondItem="Wt7-4W-8x2" secondAttribute="bottom" id="enM-56-Xx5"/>
+                                    <constraint firstItem="uXK-ma-XdL" firstAttribute="leading" secondItem="FbQ-bJ-35H" secondAttribute="leading" id="hDZ-Wk-a6u"/>
+                                    <constraint firstAttribute="trailing" secondItem="uXK-ma-XdL" secondAttribute="trailing" id="plF-bO-mL8"/>
+                                    <constraint firstItem="uXK-ma-XdL" firstAttribute="centerX" secondItem="FbQ-bJ-35H" secondAttribute="centerX" id="rP4-za-WPf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TIv-rR-lE9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FbQ-bJ-35H" firstAttribute="top" secondItem="TIv-rR-lE9" secondAttribute="top" id="VdC-04-KcT"/>
+                            <constraint firstItem="FbQ-bJ-35H" firstAttribute="centerX" secondItem="QTI-Ix-lhW" secondAttribute="centerX" id="arB-42-POf"/>
+                            <constraint firstItem="TIv-rR-lE9" firstAttribute="trailing" secondItem="FbQ-bJ-35H" secondAttribute="trailing" id="gOC-8w-Drq"/>
+                            <constraint firstItem="TIv-rR-lE9" firstAttribute="bottom" secondItem="FbQ-bJ-35H" secondAttribute="bottom" id="h4Y-Py-AiE"/>
+                            <constraint firstItem="FbQ-bJ-35H" firstAttribute="leading" secondItem="TIv-rR-lE9" secondAttribute="leading" id="mza-P6-kIb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mLn-YQ-VKO"/>
+                    <connections>
+                        <outlet property="adView" destination="4Zl-MD-9PL" id="P06-N9-Rta"/>
+                        <outlet property="heightConstraint" destination="Yha-ii-cAX" id="uFm-HN-i10"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9U4-bK-ycM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="708"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Liftoff-monetize-demo" width="125.5" height="64.5"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

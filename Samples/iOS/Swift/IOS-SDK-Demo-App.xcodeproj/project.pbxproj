@@ -24,6 +24,7 @@
 		8C74C2C4294D1FE700CF2FF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C74C2C2294D1FE700CF2FF0 /* LaunchScreen.storyboard */; };
 		8C80F2F3297F3E80005C8328 /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80F2F2297F3E80005C8328 /* AppUtil.swift */; };
 		8CF1B5BB2970E81A002168FE /* LOMRECViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF1B5BA2970E81A002168FE /* LOMRECViewController.swift */; };
+		BC31313B2CB0853600256413 /* LOInterScrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31313A2CB0853600256413 /* LOInterScrollerViewController.swift */; };
 		E8333CBF2E228677C4FD8C79 /* libPods-IOS-SDK-Demo-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F23843B9F920A3A2BB4442A0 /* libPods-IOS-SDK-Demo-App.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		8C80F2F2297F3E80005C8328 /* AppUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtil.swift; sourceTree = "<group>"; };
 		8CF1B5BA2970E81A002168FE /* LOMRECViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOMRECViewController.swift; sourceTree = "<group>"; };
 		8E4A1C093E021ED2885DD570 /* Pods-IOS-SDK-Demo-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS-SDK-Demo-App.release.xcconfig"; path = "Target Support Files/Pods-IOS-SDK-Demo-App/Pods-IOS-SDK-Demo-App.release.xcconfig"; sourceTree = "<group>"; };
+		BC31313A2CB0853600256413 /* LOInterScrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOInterScrollerViewController.swift; sourceTree = "<group>"; };
 		BC99C8226516774E0F160D80 /* Pods-IOS-SDK-Demo-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS-SDK-Demo-App.debug.xcconfig"; path = "Target Support Files/Pods-IOS-SDK-Demo-App/Pods-IOS-SDK-Demo-App.debug.xcconfig"; sourceTree = "<group>"; };
 		F23843B9F920A3A2BB4442A0 /* libPods-IOS-SDK-Demo-App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IOS-SDK-Demo-App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 		8C30DA65295E7A40006C9A49 /* Ad Formats */ = {
 			isa = PBXGroup;
 			children = (
+				BC31313A2CB0853600256413 /* LOInterScrollerViewController.swift */,
 				8C30DA63295E78EC006C9A49 /* LOInterstitialViewController.swift */,
 				8C30DA66295E7A89006C9A49 /* LORewardedViewController.swift */,
 				8C30DA68295E7A9C006C9A49 /* LOBannerViewController.swift */,
@@ -282,6 +285,7 @@
 				5B87A91C2C3D10950056D11F /* LOInlineViewController.swift in Sources */,
 				8C30DA69295E7A9C006C9A49 /* LOBannerViewController.swift in Sources */,
 				8C30DA6B295E7AA8006C9A49 /* LONativeAdViewController.swift in Sources */,
+				BC31313B2CB0853600256413 /* LOInterScrollerViewController.swift in Sources */,
 				8CF1B5BB2970E81A002168FE /* LOMRECViewController.swift in Sources */,
 				8C80F2F3297F3E80005C8328 /* AppUtil.swift in Sources */,
 				8C30DA59295CD92B006C9A49 /* PlacementSelectionTableViewController.swift in Sources */,

@@ -329,6 +329,8 @@
 		<string>REWARDED_PLAYABLE03-6535366</string>
 		<key>Inline</key>
 		<string>INLINE_DEMO_NON_BIDDING-4312505</string>
+		<key>InterScroller</key>
+		<string>INLINE_DEMO_NON_BIDDING-4312505</string>
 	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
