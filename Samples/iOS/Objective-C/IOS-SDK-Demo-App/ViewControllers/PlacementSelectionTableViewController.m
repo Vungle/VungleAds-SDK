@@ -19,6 +19,7 @@
 #import "LORewardedViewController.h"
 #import "LOMRECViewController.h"
 #import "LOInlineViewController.h"
+#import "LOInterScrollerViewController.h"
 
 @interface PlacementSelectionTableViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *placementArr;
@@ -119,25 +120,28 @@
 #pragma mark Navigation Methods
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if ([segue.identifier isEqualToString:@"toInterstitialSegue"]) {
-    LOInterstitialViewController *vc = (LOInterstitialViewController *)segue.destinationViewController;
-    vc.placementId = (NSString *)sender;
-  } else if ([segue.identifier isEqualToString:@"toNativeSegue"]) {
-    LONativeAdViewController *vc = (LONativeAdViewController *)segue.destinationViewController;
-    vc.placementId = (NSString *)sender;
-  } else if ([segue.identifier isEqualToString:@"toBannerSegue"]) {
-    LOBannerViewController *vc = (LOBannerViewController *)segue.destinationViewController;
-    vc.placementId = (NSString *)sender;
-  } else if ([segue.identifier isEqualToString:@"toRewardedSegue"]) {
-    LORewardedViewController *vc = (LORewardedViewController *)segue.destinationViewController;
-    vc.placementId = (NSString *)sender;
-  } else if ([segue.identifier isEqualToString:@"toMRECSegue"]) {
-    LOMRECViewController *vc = (LOMRECViewController *)segue.destinationViewController;
-    vc.placementId = (NSString *)sender;
-  } else if ([segue.identifier isEqualToString:@"toInlineSegue"]) {
-    LOInlineViewController *vc = (LOInlineViewController *)segue.destinationViewController;
-    vc.placementId = (NSString *)sender;
-  }
+    if ([segue.identifier isEqualToString:@"toInterstitialSegue"]) {
+        LOInterstitialViewController *vc = (LOInterstitialViewController *)segue.destinationViewController;
+        vc.placementId = (NSString *)sender;
+    } else if ([segue.identifier isEqualToString:@"toNativeSegue"]) {
+        LONativeAdViewController *vc = (LONativeAdViewController *)segue.destinationViewController;
+        vc.placementId = (NSString *)sender;
+    } else if ([segue.identifier isEqualToString:@"toBannerSegue"]) {
+        LOBannerViewController *vc = (LOBannerViewController *)segue.destinationViewController;
+        vc.placementId = (NSString *)sender;
+    } else if ([segue.identifier isEqualToString:@"toRewardedSegue"]) {
+        LORewardedViewController *vc = (LORewardedViewController *)segue.destinationViewController;
+        vc.placementId = (NSString *)sender;
+    } else if ([segue.identifier isEqualToString:@"toMRECSegue"]) {
+        LOMRECViewController *vc = (LOMRECViewController *)segue.destinationViewController;
+        vc.placementId = (NSString *)sender;
+    } else if ([segue.identifier isEqualToString:@"toInlineSegue"]) {
+        LOInlineViewController *vc = (LOInlineViewController *)segue.destinationViewController;
+        vc.placementId = (NSString *)sender;
+    } else if ([segue.identifier isEqualToString:@"toInterSegue"]) {
+        LOInterScrollerViewController *vc = (LOInterScrollerViewController *)segue.destinationViewController;
+        vc.placementId = (NSString *)sender;
+    }
 }
 
 #pragma mark UITableViewDelegate, UITableViewDatasource Methods
@@ -158,33 +162,35 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-  PlacementIDTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-  if (cell) {
-    NSString *selectedAdType = self.adTypesArr[indexPath.row];
-    NSString *segueIdentifier = nil;
-    if ([selectedAdType isEqualToString:@"Interstitial"]) {
-      segueIdentifier = @"toInterstitialSegue";
-    } else if ([selectedAdType isEqualToString:@"Banner"]) {
-      segueIdentifier = @"toBannerSegue";
-    } else if ([selectedAdType isEqualToString:@"Native"]) {
-      segueIdentifier = @"toNativeSegue";
-    } else if ([selectedAdType isEqualToString:@"MREC"]) {
-      segueIdentifier = @"toMRECSegue";
-    } else if ([selectedAdType isEqualToString:@"Inline"]) {
-      segueIdentifier = @"toInlineSegue";
-    } else if ([selectedAdType isEqualToString:@"Rewarded"] || [selectedAdType isEqualToString:@"Rewarded Playable"]) {
-      segueIdentifier = @"toRewardedSegue";
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PlacementIDTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell) {
+        NSString *selectedAdType = self.adTypesArr[indexPath.row];
+        NSString *segueIdentifier = nil;
+        if ([selectedAdType isEqualToString:@"Interstitial"]) {
+            segueIdentifier = @"toInterstitialSegue";
+        } else if ([selectedAdType isEqualToString:@"Banner"]) {
+            segueIdentifier = @"toBannerSegue";
+        } else if ([selectedAdType isEqualToString:@"Native"]) {
+            segueIdentifier = @"toNativeSegue";
+        } else if ([selectedAdType isEqualToString:@"MREC"]) {
+            segueIdentifier = @"toMRECSegue";
+        } else if ([selectedAdType isEqualToString:@"Inline"]) {
+            segueIdentifier = @"toInlineSegue";
+        } else if ([selectedAdType isEqualToString:@"InterScroller"]) {
+            segueIdentifier = @"toInterSegue";
+        } else if ([selectedAdType isEqualToString:@"Rewarded"] || [selectedAdType isEqualToString:@"Rewarded Playable"]) {
+            segueIdentifier = @"toRewardedSegue";
+        }
+        
+        if (segueIdentifier != nil) {
+            [self performSegueWithIdentifier:segueIdentifier sender:cell.placementLbl.text];
+        } else {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Confirm" message:@"The ad format is not yet supported by the Liftoff SDK" preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
     }
-    
-    if (segueIdentifier != nil) {
-      [self performSegueWithIdentifier:segueIdentifier sender:cell.placementLbl.text];
-    } else {
-      UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Confirm" message:@"The ad format is not yet supported by the Liftoff SDK" preferredStyle:UIAlertControllerStyleAlert];
-      [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-      [self presentViewController:alert animated:YES completion:nil];
-    }
-  }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

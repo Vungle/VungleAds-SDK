@@ -25,6 +25,7 @@
 		A4D3B1F829D4E4E800924D16 /* LONativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D3B1F429D4E4E800924D16 /* LONativeAdViewController.m */; };
 		A4D3B1FC29D4E6E400924D16 /* PlacementSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D3B1FB29D4E6E400924D16 /* PlacementSelectionTableViewController.m */; };
 		A4D3B20029D4EEDB00924D16 /* PlacementIDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D3B1FF29D4EEDB00924D16 /* PlacementIDTableViewCell.m */; };
+		BC1712292CB5AB3D00C03588 /* LOInterScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1712282CB5AB3D00C03588 /* LOInterScrollerViewController.m */; };
 		FFEACD24B4E4C1669CCF1D0F /* libPods-IOS-SDK-Demo-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EE112C0407917F8CF64A32 /* libPods-IOS-SDK-Demo-App.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,8 @@
 		A4D3B1FB29D4E6E400924D16 /* PlacementSelectionTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacementSelectionTableViewController.m; sourceTree = "<group>"; };
 		A4D3B1FE29D4EEDB00924D16 /* PlacementIDTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacementIDTableViewCell.h; sourceTree = "<group>"; };
 		A4D3B1FF29D4EEDB00924D16 /* PlacementIDTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacementIDTableViewCell.m; sourceTree = "<group>"; };
+		BC1712272CB5AB3D00C03588 /* LOInterScrollerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOInterScrollerViewController.h; sourceTree = "<group>"; };
+		BC1712282CB5AB3D00C03588 /* LOInterScrollerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOInterScrollerViewController.m; sourceTree = "<group>"; };
 		C3ABF6D796008E4517BDF971 /* Pods-IOS-SDK-Demo-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS-SDK-Demo-App.release.xcconfig"; path = "Target Support Files/Pods-IOS-SDK-Demo-App/Pods-IOS-SDK-Demo-App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +165,8 @@
 				A42D5ECC29D78D12002F7A30 /* LOMRECViewController.m */,
 				5B87A91F2C3E54CD0056D11F /* LOInlineViewController.h */,
 				5B87A9202C3E54CD0056D11F /* LOInlineViewController.m */,
+				BC1712272CB5AB3D00C03588 /* LOInterScrollerViewController.h */,
+				BC1712282CB5AB3D00C03588 /* LOInterScrollerViewController.m */,
 			);
 			path = "Ad Formats";
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				A444995029D5FBD100C606BF /* CallbackLog.m in Sources */,
 				A477CD6D29CBC268003224C0 /* main.m in Sources */,
 				A4D3B1F729D4E4E800924D16 /* LORewardedViewController.m in Sources */,
+				BC1712292CB5AB3D00C03588 /* LOInterScrollerViewController.m in Sources */,
 				A477CD7829CBC29F003224C0 /* BridgingHeader.swift in Sources */,
 				A4D3B1FC29D4E6E400924D16 /* PlacementSelectionTableViewController.m in Sources */,
 				A477CD5F29CBC267003224C0 /* SceneDelegate.m in Sources */,
