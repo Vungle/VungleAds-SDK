@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 7.4.2 (OCT 10, 2024)
+- Added guards to fix sporadic race condition issues when the SDK initializes
+- Fixed background music play issues when the ad closes
+
 ## Version 7.4.1 (September 3, 2024)
 - Optimization in SDK initialization
 - Update OMSDK to version 1.5.0
