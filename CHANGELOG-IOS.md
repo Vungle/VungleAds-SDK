@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 7.4.3 (DEC 5, 2024)
+- Addressed reported audio issues during banner playback
+
 ## Version 7.4.2 (OCT 10, 2024)
 - Added guards to fix sporadic race condition issues when the SDK initializes
 - Fixed background music play issues when the ad closes
