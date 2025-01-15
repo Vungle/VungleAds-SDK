@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 7.4.4 (JAN 15, 2024)
+- SDK Updates and Improvements
+
 ## Version 7.4.3 (DEC 5, 2024)
 - Addressed reported audio issues during banner playback
 
