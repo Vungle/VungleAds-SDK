@@ -1,5 +1,13 @@
 # Changelog
 
+## Vungle SDK for Android/Amazon 7.4.3 (January 21, 2025)
+* VungleError Optimization
+* Update OMSDK to version 1.5.2
+* Bug fixes and stability improvements
+
+## Vungle SDK for Android/Amazon 7.4.2 (October 30, 2024)
+* Bug fixes and stability improvements
+
 ## Vungle SDK for Android/Amazon 7.4.1 (September 3, 2024)
 * Optimization in SDK initialization
 * Update OMSDK to version 1.5.0
