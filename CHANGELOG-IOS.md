@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 7.4.5 (MAR 18, 2025)
+- SkOverlay rendering Issue fix
+- Banner alignment issue fix
+- SDK Updates and Improvements
+  
 ## Version 7.4.4 (JAN 15, 2025)
 - SDK Updates and Improvements
 
