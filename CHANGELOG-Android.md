@@ -2,9 +2,10 @@
 
 ## Vungle SDK for Android/Amazon 7.5.0 (April 28, 2025)
 * Remove VungleAdSize.getAdSizeWithWidthAndMaxHeight(width, maxHeight)
-* Rename class VungleAds.WrapperFramework to VungleWrapperFramework.
-* More metric and error logs.
+* Replace class VungleAds.WrapperFramework with VungleWrapperFramework.
+* Introduce new metric and error logs.
 * OMSDK upgraded to 1.5.3.
+* Introduce device creation time: oit, ort, obt.
 * SDK enhancement and bug fixes.
 
 ## Vungle SDK for Android/Amazon 7.4.3 (January 21, 2025)
