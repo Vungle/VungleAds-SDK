@@ -1,5 +1,40 @@
 # Changelog
 
+## Version 7.6.2 (NOV 10, 2025)
+- Stability Improvements
+- Audience Insights API optimization
+
+## Version 7.6.1 (OCT 15, 2025)
+- Updated OMSDK to 1.5.7 to fix iOS 26 specific issue
+- Stability Improvements
+
+## Version 7.6.0 (SEP 25, 2025)
+- Stability Improvements
+- Improved ad experience
+- Continued focus on SDK lightweight design
+- Ad Attribution Kit (AAK) Support
+- iOS 26 tested
+
+## Version 7.5.3 (AUG 6, 2025)
+- SDK Updates and Improvements
+- Updated code signing with new team ID
+
+## Version 7.5.2 (JULY 15, 2025)
+- Built with Xcode 16
+- SDK Updates and Improvements
+
+## Version 7.5.1 (MAY 9, 2025)
+- Built with Xcode 16
+- Fixed internal logging issue
+
+## Version 7.5.0 (APR 24, 2025)
+- Fixed banner misalignment with AppLovin apps
+- Resolved a crash related to devices on iOS 12
+- Resolved a crash related to SKOverlay dismissal and Unity apps
+- Resolved a rare crash related to initialization and User-Agent retrieval
+- Improved SDK network performance and StoreKit functionality
+- Updated OMSDK to 1.5.3
+
 ## Version 7.4.5 (MAR 18, 2025)
 - SkOverlay rendering Issue fix
 - Banner alignment issue fix
