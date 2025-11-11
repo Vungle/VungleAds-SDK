@@ -1,5 +1,9 @@
 # Changelog
 
+## Vungle SDK for Android/Amazon 7.6.1 (November 11, 2025)
+* Stability Improvements
+* Audience Insights API optimization
+
 ## Vungle SDK for Android/Amazon 7.6.0 (September 26, 2025)
 * Stability Improvements
 * Improved ad experience
