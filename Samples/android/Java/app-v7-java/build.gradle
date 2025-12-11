@@ -48,7 +48,7 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
     // Vungle SDK
-    implementation 'com.vungle:vungle-ads:7.6.1'
+    implementation 'com.vungle:vungle-ads:7.6.2'
 
     // Recommended Google Play Services libraries to support app set ID (v6.10.3 and above)
     implementation 'com.google.android.gms:play-services-tasks:18.0.2'
