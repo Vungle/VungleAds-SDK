@@ -1,4 +1,6 @@
 # Changelog
+## Version 7.6.3 (Dec 14, 2025)
+- Stability Improvements
 
 ## Version 7.6.2 (NOV 10, 2025)
 - Stability Improvements
