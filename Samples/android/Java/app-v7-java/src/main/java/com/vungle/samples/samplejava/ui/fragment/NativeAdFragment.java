@@ -12,6 +12,7 @@ import com.vungle.ads.BaseAd;
 import com.vungle.ads.NativeAd;
 import com.vungle.ads.NativeAdListener;
 import com.vungle.ads.VungleError;
+import com.vungle.ads.nativead.NativeVideoListener;
 import com.vungle.samples.samplejava.R;
 import com.vungle.samples.samplejava.databinding.LayoutNativeAdBinding;
 
@@ -35,6 +36,7 @@ public class NativeAdFragment extends AdExperienceFragment implements NativeAdLi
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        _binding.nativeVideoLog.setVisibility(View.VISIBLE);
         configureUI();
     }
 
@@ -72,6 +74,36 @@ public class NativeAdFragment extends AdExperienceFragment implements NativeAdLi
             clickableViews.add(layout.imgAdIcon);
             clickableViews.add(layout.pnlVideoAd);
             clickableViews.add(layout.btnAdCta);
+
+            if(nativeAd.hasVideoContent()) {
+                layout.pnlVideoAd.setNativeVideoListener(new NativeVideoListener() {
+                    @Override
+                    public void onVideoPlay() {
+                        setTextColor(_binding.videoPlayTV, R.color.black);
+                    }
+
+                    @Override
+                    public void onVideoPause() {
+                        setTextColor(_binding.videoPauseTV, R.color.black);
+                    }
+
+                    @Override
+                    public void onVideoEnd() {
+                        setTextColor(_binding.videoEndTV, R.color.black);
+                    }
+
+                    @Override
+                    public void onVideoMute() {
+                        setTextColor(_binding.videoMuteTV, R.color.black);
+                    }
+
+                    @Override
+                    public void onVideoUnmute() {
+                        setTextColor(_binding.videoUnmuteTV, R.color.black);
+                    }
+                });
+            }
+
             nativeAd.registerViewForInteraction(layout.getRoot(), layout.pnlVideoAd, layout.imgAdIcon, clickableViews);
 
             layout.lbAdTitle.setText(nativeAd.getAdTitle());
@@ -87,10 +119,21 @@ public class NativeAdFragment extends AdExperienceFragment implements NativeAdLi
     }
 
     @Override
+    protected void resetCallbackLabelColor() {
+        super.resetCallbackLabelColor();
+        setTextColor(_binding.videoPlayTV, R.color.lightGray);
+        setTextColor(_binding.videoPauseTV, R.color.lightGray);
+        setTextColor(_binding.videoEndTV, R.color.lightGray);
+        setTextColor(_binding.videoMuteTV, R.color.lightGray);
+        setTextColor(_binding.videoUnmuteTV, R.color.lightGray);
+    }
+
+    @Override
     protected void loadAd() {
         super.loadAd();
         nativeAd = new NativeAd(requireActivity(), placementId);
         nativeAd.setAdListener(this);
+        nativeAd.getVideoOptions().setStartMuted(true);
         nativeAd.load("");
     }
 

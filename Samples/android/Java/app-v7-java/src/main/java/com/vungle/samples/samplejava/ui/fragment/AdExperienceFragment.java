@@ -36,7 +36,7 @@ public class AdExperienceFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        _binding.nativeVideoLog.setVisibility(View.GONE);
         _binding.btnLoadAd.setOnClickListener(view1 -> {
             AdExperienceFragment.this.resetCallbackLabelColor();
             AdExperienceFragment.this.loadAd();
@@ -57,7 +57,7 @@ public class AdExperienceFragment extends Fragment {
 
     }
 
-    private void resetCallbackLabelColor() {
+    protected void resetCallbackLabelColor() {
         _binding.adContainer.removeAllViews();
         setTextColor(_binding.lbAdLoaded, R.color.lightGray);
         setTextColor(_binding.lbAdStart, R.color.lightGray);
