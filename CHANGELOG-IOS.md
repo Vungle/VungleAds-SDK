@@ -1,4 +1,8 @@
 # Changelog
+## Version 7.6.3 (Jan 29, 2026)
+- Native Video support
+- Logging optimizations
+
 ## Version 7.6.3 (Dec 14, 2025)
 - Stability Improvements
 
