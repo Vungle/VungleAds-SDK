@@ -26,8 +26,8 @@
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="BANNER_1-8363817" />
 
@@ -110,92 +110,149 @@
         app:layout_constraintTop_toBottomOf="@+id/divider3">
 
         <LinearLayout
-            android:id="@+id/tblCallbacksLogList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/lbAdLoaded"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:gravity="center"
-                android:text="@string/adloaded"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+            <LinearLayout
+                android:id="@+id/tblCallbacksLogList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/lbAdStart"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/adstart"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbAdLoaded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="@string/adloaded"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/lbAdImpression"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/adimpression"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbAdStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adstart"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/lbAdClick"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/adclick"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbAdImpression"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adimpression"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/lbOnAdLeftApplication"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/onadleftapplication"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbAdClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adclick"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/lbOnRewarded"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/onrewarded"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp"
-                android:visibility="gone" />
+                <TextView
+                    android:id="@+id/lbOnAdLeftApplication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/onadleftapplication"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/lbAdEnd"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/adend"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbOnRewarded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/onrewarded"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/lbError"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/error"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbAdEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adend"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lbError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/error"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/native_video_log"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/videoPlayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="onVideoPlay"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/videoPauseTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="onVideoPause"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/videoEndTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="onVideoEnd"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/videoMuteTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="onVideoMute"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/videoUnmuteTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="onVideoUnmute"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+            </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -325,13 +382,13 @@
         android:layout_marginStart="4dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="@color/button_blue"
-        android:text="@string/not_set"
         android:maxLines="1"
+        android:text="@string/not_set"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:autoSizeTextType="uniform"
         app:autoSizeMaxTextSize="14sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/lbAdOptionsPosition"
         app:layout_constraintEnd_toStartOf="@+id/btnPortraitOrientation"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -342,13 +399,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:text="@string/portrait"
         android:maxLines="1"
+        android:text="@string/portrait"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:autoSizeTextType="uniform"
         app:autoSizeMaxTextSize="14sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnLandscapeOrientation"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -358,13 +415,13 @@
         android:id="@+id/btnLandscapeOrientation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:maxLines="1"
         android:text="@string/landscape"
         android:textAllCaps="false"
-        android:maxLines="1"
         android:textColor="@android:color/black"
         android:textSize="14sp"
-        app:autoSizeTextType="uniform"
         app:autoSizeMaxTextSize="14sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/btnNotSetOrientation"
         app:layout_constraintEnd_toStartOf="@+id/btnAutoRotateOrientation"
         app:layout_constraintStart_toEndOf="@+id/btnPortraitOrientation"
@@ -375,13 +432,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
+        android:maxLines="1"
         android:text="@string/auto_rotate"
         android:textAllCaps="false"
-        android:maxLines="1"
         android:textColor="@android:color/black"
         android:textSize="14sp"
-        app:autoSizeTextType="uniform"
         app:autoSizeMaxTextSize="14sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/btnNotSetOrientation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnLandscapeOrientation"
@@ -411,12 +468,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/button_blue"
+        android:maxLines="2"
         android:text="@string/not_n_set"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:maxLines="2"
         android:textSize="12sp"
-        android:backgroundTint="@color/button_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnTopLeftPosition"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -426,9 +483,9 @@
         android:id="@+id/btnTopLeftPosition"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:maxLines="2"
         android:text="@string/top_left"
         android:textAllCaps="false"
-        android:maxLines="2"
         android:textColor="@android:color/black"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnNotSetPosition"
@@ -441,9 +498,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
+        android:maxLines="2"
         android:text="@string/top_right"
         android:textAllCaps="false"
-        android:maxLines="2"
         android:textColor="@android:color/black"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnNotSetPosition"
@@ -456,9 +513,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
+        android:maxLines="2"
         android:text="@string/bottom_left"
         android:textAllCaps="false"
-        android:maxLines="2"
         android:textColor="@android:color/black"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnNotSetPosition"
@@ -471,9 +528,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
+        android:maxLines="2"
         android:text="@string/bottom_right"
         android:textAllCaps="false"
-        android:maxLines="2"
         android:textColor="@android:color/black"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnNotSetPosition"

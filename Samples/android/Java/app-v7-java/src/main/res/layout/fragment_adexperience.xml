@@ -110,92 +110,155 @@
         app:layout_constraintTop_toBottomOf="@+id/divider3">
 
         <LinearLayout
-            android:id="@+id/tblCallbacksLogList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/lbAdLoaded"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:gravity="center"
-                android:text="@string/adloaded"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+            <LinearLayout
+                android:id="@+id/tblCallbacksLogList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/lbAdStart"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/adstart"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbAdLoaded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="@string/adloaded"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/lbAdImpression"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/adimpression"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbAdStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adstart"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/lbAdClick"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/adclick"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbAdImpression"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adimpression"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/lbOnAdLeftApplication"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/onadleftapplication"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbAdClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adclick"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/lbOnRewarded"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/onrewarded"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp"
-                android:visibility="gone" />
+                <TextView
+                    android:id="@+id/lbOnAdLeftApplication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/onadleftapplication"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/lbAdEnd"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/adend"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbOnRewarded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/onrewarded"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/lbError"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/error"
-                android:textColor="@color/lightGray"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/lbAdEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adend"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lbError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/error"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/native_video_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/videoPlayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="onVideoPlay"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/videoPauseTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="onVideoPause"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/videoEndTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="onVideoEnd"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/videoMuteTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="onVideoMute"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/videoUnmuteTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="onVideoUnmute"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+            </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

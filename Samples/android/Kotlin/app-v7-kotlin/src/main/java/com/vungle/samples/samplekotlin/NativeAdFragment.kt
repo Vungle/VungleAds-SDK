@@ -1,6 +1,7 @@
 package com.vungle.samples.samplekotlin
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
@@ -12,6 +13,9 @@ import com.vungle.ads.NativeAd
 import com.vungle.ads.NativeAdListener
 import com.vungle.ads.BaseAd
 import com.vungle.ads.VungleError
+import com.vungle.ads.nativead.NativeVideoListener
+import com.vungle.samples.samplekotlin.utils.extensions.blackText
+import com.vungle.samples.samplekotlin.utils.extensions.lightGrayText
 
 class NativeAdFragment : AdExperienceFragment(), NativeAdListener {
 
@@ -19,19 +23,30 @@ class NativeAdFragment : AdExperienceFragment(), NativeAdListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.nativeVideoLog.visibility = View.VISIBLE
         configureUi()
     }
 
     override fun loadAd() {
         super.loadAd()
-//    nativeAd = NativeAd(requireContext(), placementId, )
         nativeAd = NativeAd(requireContext(), placementId).apply {
             adOptionsPosition = NativeAd.TOP_LEFT
+            videoOptions.apply {
+                startMuted = true
+            }
         }.apply {
             adListener = this@NativeAdFragment
             load()
         }
+    }
+
+    override fun resetCallbackLabelColor() {
+        super.resetCallbackLabelColor()
+        binding.videoPlayTV.lightGrayText()
+        binding.videoPauseTV.lightGrayText()
+        binding.videoEndTV.lightGrayText()
+        binding.videoMuteTV.lightGrayText()
+        binding.videoUnmuteTV.lightGrayText()
     }
 
     override fun playAd() {
@@ -48,6 +63,36 @@ class NativeAdFragment : AdExperienceFragment(), NativeAdListener {
             val layout = LayoutNativeAdBinding.inflate(LayoutInflater.from(requireContext()))
             with(layout) {
                 binding.adContainer.removeAllViews()
+
+                if (nativeAd.hasVideoContent()) {
+                    pnlVideoAd.setNativeVideoListener(object : NativeVideoListener {
+
+                        override fun onVideoPlay() {
+                            Log.d(TAG, "onVideoPlay")
+                            binding.videoPlayTV.blackText()
+                        }
+
+                        override fun onVideoPause() {
+                            Log.d(TAG, "onVideoPause")
+                            binding.videoPauseTV.blackText()
+                        }
+
+                        override fun onVideoEnd() {
+                            Log.d(TAG, "onVideoEnd")
+                            binding.videoEndTV.blackText()
+                        }
+
+                        override fun onVideoMute() {
+                            Log.d(TAG, "onVideoMute")
+                            binding.videoMuteTV.blackText()
+                        }
+
+                        override fun onVideoUnmute() {
+                            Log.d(TAG, "onVideoUnmute")
+                            binding.videoUnmuteTV.blackText()
+                        }
+                    })
+                }
 
                 val clickableViews = mutableListOf(imgAdIcon, pnlVideoAd, btnAdCta)
                 nativeAd.registerViewForInteraction(

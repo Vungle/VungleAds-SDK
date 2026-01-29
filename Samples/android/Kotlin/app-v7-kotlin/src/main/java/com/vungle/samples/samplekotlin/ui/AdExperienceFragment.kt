@@ -36,6 +36,7 @@ open class AdExperienceFragment : Fragment(R.layout.fragment_adexperience), Inte
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+      binding.nativeVideoLog.visibility = View.GONE
     binding.btnLoadAd.setOnClickListener {
       resetCallbackLabelColor()
       loadAd()
@@ -128,7 +129,7 @@ open class AdExperienceFragment : Fragment(R.layout.fragment_adexperience), Inte
     Log.d(TAG, "Destroy ad")
   }
 
-  private fun resetCallbackLabelColor() {
+  open fun resetCallbackLabelColor() {
     binding.adContainer.removeAllViews()
     binding.lbAdLoaded.lightGrayText()
     binding.lbAdStart.lightGrayText()
