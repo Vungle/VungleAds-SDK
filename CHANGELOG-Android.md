@@ -1,5 +1,10 @@
 # Changelog
 
+## Vungle SDK for Android/Amazon 7.7.1 (February 26, 2026)
+* Stability Improvements
+* Updated OMSDK to 1.6.2
+* Logging Improvements
+
 ## Vungle SDK for Android/Amazon 7.7.0 (January 29, 2026)
 * Stability Improvements
 
