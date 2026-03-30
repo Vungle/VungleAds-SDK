@@ -44,7 +44,7 @@ public class RewardedFragment extends AdExperienceFragment implements RewardedAd
         super.loadAd();
         rewardedAd = new RewardedAd(requireActivity(), placementId, new AdConfig());
         rewardedAd.setAdListener(this);
-        rewardedAd.load("");
+        rewardedAd.load();
     }
 
     @Override

@@ -134,7 +134,7 @@ public class NativeAdFragment extends AdExperienceFragment implements NativeAdLi
         nativeAd = new NativeAd(requireActivity(), placementId);
         nativeAd.setAdListener(this);
         nativeAd.getVideoOptions().setStartMuted(true);
-        nativeAd.load("");
+        nativeAd.load();
     }
 
     @Override

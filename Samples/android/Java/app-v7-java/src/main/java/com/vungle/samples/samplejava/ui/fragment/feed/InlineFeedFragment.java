@@ -159,7 +159,7 @@ public class InlineFeedFragment extends Fragment {
     } );
 
     // Load the inline ad.
-    item.load( null );
+    item.load();
   }
 
   @Override

@@ -65,7 +65,7 @@ public class BannerFragment extends AdExperienceFragment implements BannerAdList
         super.loadAd();
         bannerAd = new VungleBannerView(requireActivity(), placementId, VungleAdSize.BANNER);
         bannerAd.setAdListener(this);
-        bannerAd.load("");
+        bannerAd.load();
 
         ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(
             FrameLayout.LayoutParams.WRAP_CONTENT,

@@ -35,7 +35,7 @@ public class InterstitialFragment extends AdExperienceFragment implements Inters
         super.loadAd();
         interstitialAd = new InterstitialAd(requireActivity(), placementId, new AdConfig());
         interstitialAd.setAdListener(this);
-        interstitialAd.load("");
+        interstitialAd.load();
     }
 
     @Override

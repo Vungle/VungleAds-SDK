@@ -47,7 +47,7 @@ public class InlineFragment extends AdExperienceFragment implements BannerAdList
         VungleAdSize vngAdSize = VungleAdSize.getAdSizeWithWidthAndHeight( 300, 200 );
         bannerAd = new VungleBannerView(requireActivity(), placementId, vngAdSize);
         bannerAd.setAdListener(this);
-        bannerAd.load("");
+        bannerAd.load();
 
         ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(
             FrameLayout.LayoutParams.WRAP_CONTENT,

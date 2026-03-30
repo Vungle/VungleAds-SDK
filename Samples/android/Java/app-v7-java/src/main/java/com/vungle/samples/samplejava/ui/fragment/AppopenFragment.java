@@ -29,7 +29,7 @@ public class AppopenFragment extends AdExperienceFragment implements Interstitia
         super.loadAd();
         interstitialAd = new InterstitialAd(requireActivity(), placementId, new AdConfig());
         interstitialAd.setAdListener(this);
-        interstitialAd.load("");
+        interstitialAd.load();
     }
 
     @Override
