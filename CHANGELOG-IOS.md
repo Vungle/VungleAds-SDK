@@ -1,4 +1,13 @@
 # Changelog
+## Version 7.7.1 (Feb 26, 2026)
+- Stability Improvements
+- Updated OMSDK to 1.6.2
+- Logging Improvements
+
+## Version 7.7.0 (Jan 29, 2026)
+- Native Video support
+- Logging optimizations
+
 ## Version 7.6.3 (Dec 14, 2025)
 - Stability Improvements
 
