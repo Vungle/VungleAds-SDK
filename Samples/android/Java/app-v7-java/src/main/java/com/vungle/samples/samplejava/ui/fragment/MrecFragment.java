@@ -68,7 +68,7 @@ public class MrecFragment extends AdExperienceFragment implements BannerAdListen
         super.loadAd();
         bannerAd = new VungleBannerView(requireActivity(), placementId, VungleAdSize.MREC);
         bannerAd.setAdListener(this);
-        bannerAd.load("");
+        bannerAd.load();
 
         ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(
             FrameLayout.LayoutParams.WRAP_CONTENT,
