@@ -1,5 +1,9 @@
 # Changelog
 
+## Vungle SDK for Android/Amazon 7.7.3 (April 24, 2026)
+* Stability Improvements
+* Fix full-screen ad closing immediately on back press for Android 13+ hosts
+
 ## Vungle SDK for Android/Amazon 7.7.2 (March 30, 2026)
 * Stability Improvements
 * setIntegrationName() Improvements
