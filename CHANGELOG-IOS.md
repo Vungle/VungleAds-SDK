@@ -1,4 +1,8 @@
 # Changelog
+## Version 7.7.2 (April 14, 2026)
+- Bug Fixes
+- Stability Improvements
+
 ## Version 7.7.1 (Feb 26, 2026)
 - Stability Improvements
 - Updated OMSDK to 1.6.2
