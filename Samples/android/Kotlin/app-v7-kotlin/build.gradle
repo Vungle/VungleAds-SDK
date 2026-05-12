@@ -31,7 +31,7 @@ android {
         release {
             minifyEnabled true
             shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
     }
@@ -58,7 +58,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
     // Vungle SDK
-    implementation 'com.vungle:vungle-ads:7.7.3'
+    implementation 'com.vungle:vungle-ads:7.7.4'
 
     // Recommended Google Play Services libraries to support app set ID (v6.10.3 and above)
     implementation 'com.google.android.gms:play-services-tasks:18.0.2'
