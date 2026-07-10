@@ -1,5 +1,9 @@
 # Changelog
 
+## Vungle SDK for Android/Amazon 7.7.5 (July 6, 2026)
+* Stability Improvements
+* Performance Improvements
+
 ## Vungle SDK for Android/Amazon 7.7.4 (May 12, 2026)
 * Stability Improvements
 
