@@ -1,4 +1,10 @@
 # Changelog
+## Version 7.7.6 (July 28, 2026)
+- Bug Fixes
+- Stability Improvements
+- Added support for disclosure labeling of AI-generated content in Native ads
+- Base supported Xcode version updated to 16.4
+
 ## Version 7.7.5 (July 17, 2026)
 - Bug Fixes
 - Stability Improvements
