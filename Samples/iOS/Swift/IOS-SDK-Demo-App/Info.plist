@@ -312,25 +312,25 @@
 		</dict>
 	</array>
 	<key>Liftoff Dashboard AppID</key>
-	<string>5e13cc9d61880b27a65bf735</string>
+	<string>654d22632d8e98854bf56b32</string>
 	<key>Liftoff PlacementID</key>
 	<dict>
 		<key>Banner</key>
-		<string>BANNER04-8166553</string>
+		<string>BANNER-2810663</string>
 		<key>Interstitial</key>
-		<string>INTERSTITIAL02-1468016</string>
+		<string>INTERSTITIAL04-6620352</string>
 		<key>MREC</key>
-		<string>MREC03-4489762</string>
+		<string>MREC-4065165</string>
 		<key>Native</key>
-		<string>NATIVE_MAX_01-3496325</string>
+		<string>NATIVE-6281200</string>
 		<key>Rewarded</key>
-		<string>REWARDED03-2663131</string>
+		<string>REWARD_SKIPPABLE01-3577678</string>
 		<key>Rewarded Playable</key>
-		<string>REWARDED_PLAYABLE03-6535366</string>
+		<string>REWARD01-6449359</string>
 		<key>Inline</key>
-		<string>INLINE_DEMO_NON_BIDDING-4312505</string>
+		<string>TEST_INLINE-3730894</string>
 		<key>InterScroller</key>
-		<string>INLINE_DEMO_NON_BIDDING-4312505</string>
+		<string>TEST_INLINE-3730894</string>
 	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
