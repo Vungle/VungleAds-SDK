@@ -1,8 +1,7 @@
 # Changelog
 
-## Vungle SDK for Android/Amazon 7.7.9 (September 29, 2026)
+## Vungle SDK for Android/Amazon 7.7.9 (September 30, 2026)
 * Stability Improvements
-* Added mediationPartnerName property on ad objects
 
 ## Vungle SDK for Android/Amazon 7.7.8 (August 27, 2026)
 * Stability Improvements
