@@ -1,4 +1,8 @@
 # Changelog
+## Version 7.7.8 (Sep 30, 2026)
+- Bug Fixes
+- Stability Improvements
+
 ## Version 7.7.7 (Aug 26, 2026)
 - Bug Fixes
 - Stability Improvements

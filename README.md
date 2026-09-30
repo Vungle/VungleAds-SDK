@@ -12,8 +12,8 @@ Explore the [Vungle iOS SDK Documentation](https://support.vungle.com/hc/en-us/a
 ### Attributions
 | Component                       | Version | Description                                                                          | License                                                                                        |
 |---------------------------------|---------|--------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| Open Measurement (OM) In-App    | 1.5.3   | Measurement of mobile in-app ads by third-party viewability and verification vendors | [Open Measurement (OM) License](https://tools.iabtechlab.com/pdf/Native-App-1.1.pdf)           |
-| Open Measurement (OM) Web Video | 1.5.3   | Web Video supports video ads on desktop and mobile                                   | [Open Measurement (OM) License for Web Video](https://tools.iabtechlab.com/pdf/WebLicense.pdf) |
+| Open Measurement (OM) In-App    | 1.6.9   | Measurement of mobile in-app ads by third-party viewability and verification vendors | [Open Measurement (OM) License](https://tools.iabtechlab.com/pdf/Native-App-1.1.pdf)           |
+| Open Measurement (OM) Web Video | 1.6.9   | Web Video supports video ads on desktop and mobile                                   | [Open Measurement (OM) License for Web Video](https://tools.iabtechlab.com/pdf/WebLicense.pdf) |
 | Swift Protobuf                  | 1.19.0  | Lite version of Protocol Buffers library                                             | [Apache 2.0](https://github.com/apple/swift-protobuf/blob/main/LICENSE.txt)                    |
 
 ### Change log
