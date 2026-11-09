@@ -1,5 +1,9 @@
 # Changelog
 
+## Vungle SDK for Android/Amazon 7.8.0 (November 9, 2026)
+* Added an embedded browser for template and native ad clicks
+* Stability Improvements
+
 ## Vungle SDK for Android/Amazon 7.7.9 (September 30, 2026)
 * Stability Improvements
 
